@@ -52,7 +52,7 @@ public class PrimeNumbers {
         int howManyNumberInLastRow;
         howManyNumberInLastRow = arrayNumbers.size() - (howManyRows - 1)*NUMBERS_PER_ROW;
         for (int i = 1; i < howManyNumberInLastRow; i++) {
-            System.out.print(arrayNumbers.get((howManyRows-1)*NUMBERS_PER_ROW + i) + " ");
+                System.out.print(arrayNumbers.get((howManyRows-1)*NUMBERS_PER_ROW + i) + " ");
         }
 
     }
