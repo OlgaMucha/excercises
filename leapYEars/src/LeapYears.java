@@ -11,7 +11,7 @@ leap years in this period.*/
 
     public static void main(String[] args) {
         ArrayList<Integer> arrayLeapYears = new ArrayList<>();
-        
+
         arrayLeapYears = createArrayWithLeapYears();
         printOutput(arrayLeapYears);
     }
