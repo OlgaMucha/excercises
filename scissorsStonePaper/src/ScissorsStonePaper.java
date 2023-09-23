@@ -12,17 +12,23 @@ public class ScissorsStonePaper {
     public static void main(String[] args) {
         int sumWinsUser = 0;
         int sumWinsComputer = 0;
+        String userString = "";
+        String computersString = "";
 
+     //game will be played until the difference between user score and computer score is 2
      while(((sumWinsComputer - sumWinsUser <= MAX_DIFFERENCE_IN_RESULTS - 1)&&(sumWinsComputer - sumWinsUser >= 0))
              || ((sumWinsUser - sumWinsComputer <= MAX_DIFFERENCE_IN_RESULTS - 1)&&(sumWinsUser - sumWinsComputer >= 0))){
 
         int play = winnerInSingleGame();
         if (play == 1) {
-            sumWinsUser = sumWinsUser + MAX_DIFFERENCE_IN_RESULTS - 1 ;
+            sumWinsUser = sumWinsUser + (MAX_DIFFERENCE_IN_RESULTS - 1);
+            userString = userString.concat("|");
         } else if (play == -1) {
-            sumWinsComputer = sumWinsComputer + MAX_DIFFERENCE_IN_RESULTS - 1;
+            sumWinsComputer = sumWinsComputer + (MAX_DIFFERENCE_IN_RESULTS - 1);
+            computersString = computersString.concat("|");
         }
-         System.out.println("You: " + sumWinsUser +  " Computer: " + sumWinsComputer);
+
+         System.out.println("You: " + userString +  " Computer: " + computersString);
     }
 
 
