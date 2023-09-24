@@ -33,7 +33,7 @@ public class LongestCommonPrefix {
         if(checkCommonPrefix(firstString, secondString, shortestString).equals("")){
             System.out.println("No common prefix");
         }else {
-            System.out.println(checkCommonPrefix(firstString, secondString, shortestString));
+            System.out.println("Common prefix is: " + checkCommonPrefix(firstString, secondString, shortestString));
         }
 
     }
