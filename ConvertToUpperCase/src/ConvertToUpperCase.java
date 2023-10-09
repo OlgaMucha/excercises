@@ -1,10 +1,19 @@
 public class ConvertToUpperCase {
 
-    public static void main(String[] args) {
+    public String string;
 
-        String st = " string";
+    public ConvertToUpperCase(String string) {
+        this.string = string;
+    }
 
-        System.out.println(st.toUpperCase());
+    public String toUpperCase(String string) {
+        return string.toUpperCase();
     }
 
 }
+
+
+
+
+
+
