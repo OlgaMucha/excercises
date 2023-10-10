@@ -1,6 +1,8 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Objects;
+
 public class Student {
 
     //region Getters&setters
@@ -8,8 +10,11 @@ public class Student {
     public int index;
     public int grade;
 
-    public Student(int index, int grade) {
+    public Student(int index, int grade) throws IllegalArgumentException {
         this.index = index;
+        if(grade < 0){
+            throw new IllegalArgumentException("grade can't have negative value");
+        }
         this.grade = grade;
     }
 
@@ -49,5 +54,18 @@ public class Student {
             gradeLetter = 'F';
         }
         return gradeLetter;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return index == student.index;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(index);
     }
 }
