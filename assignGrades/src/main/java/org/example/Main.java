@@ -1,24 +1,27 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
         ArrayList<Student> students = new ArrayList<>();
-        Student student1 = new Student("Anna", 58.5);
-        Student student2 = new Student("Olga", 41.5);
-        Student student3 = new Student("Add", 0.5);
+        System.out.print("Enter the number of students: ");
+        int numberOfStudents = scanner.nextInt();
 
-        students.add(student1);
-        students.add(student2);
-        students.add(student3);
+        System.out.print("Enter " + numberOfStudents + " scores:");
 
-        double bestScore = Student.getTheBestScore(students);
-        System.out.println(bestScore);
+        for (int i = 0; i < numberOfStudents; i++) {
+            students.add(new Student(i,scanner.nextInt()));
+        }
 
-        System.out.println(student1.getGradeLetter(students));
-        System.out.println(student2.getGradeLetter(students));
-        System.out.println(student3.getGradeLetter(students));
+        for (Student student: students) {
+            System.out.println("Student " + student.index + " score is " + (int)student.getGrade() + " and grade is " + student.getGradeLetter(students));
+        }
+
+
 
     }
 }
