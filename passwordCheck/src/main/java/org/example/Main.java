@@ -7,10 +7,17 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter password: ");
-        String password = scanner.nextLine();
+        String passwordString = scanner.nextLine();
+        String message;
 
-        Password password1 = new Password(password);
-        System.out.println("Password is correct " + password1.passwordCorrectCheck());
+        Password password1 = new Password(passwordString);
+        boolean passwordIsCorrect = password1.passwordCorrectCheck();
+        if(passwordIsCorrect){
+            message = "Valid password";
+        } else {
+            message = "Invalid password";
+        }
+        System.out.println(message);
 
 
 

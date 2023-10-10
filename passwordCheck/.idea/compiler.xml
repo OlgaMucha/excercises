@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="passwordCheck1" />
+        <module name="passwordCheck" />
       </profile>
     </annotationProcessing>
   </component>
