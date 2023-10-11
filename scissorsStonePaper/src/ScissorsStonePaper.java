@@ -3,48 +3,11 @@ import java.util.*;
 public class ScissorsStonePaper {
     public static final int MAX_DIFFERENCE_IN_RESULTS = 2;
 
-        /*(Game: scissor, rock, paper) Programming Exercise 3.17 gives a program that
-        plays the scissors–rock–paper game. Revise the program to let the user continuously
-        play until either the user or the computer wins more than two times than its
-        opponent.
-        Rock wins against scissors; paper wins against rock; and scissors wins against paper.*/
-
-    public static void main(String[] args) {
-        int sumWinsUser = 0;
-        int sumWinsComputer = 0;
-        String userString = "";
-        String computersString = "";
-
-     //game will be played until the difference between user score and computer score is 2
-     while(((sumWinsComputer - sumWinsUser <= MAX_DIFFERENCE_IN_RESULTS - 1)&&(sumWinsComputer - sumWinsUser >= 0))
-             || ((sumWinsUser - sumWinsComputer <= MAX_DIFFERENCE_IN_RESULTS - 1)&&(sumWinsUser - sumWinsComputer >= 0))){
-
-        int play = winnerInSingleGame();
-        if (play == 1) {
-            sumWinsUser = sumWinsUser + (MAX_DIFFERENCE_IN_RESULTS - 1);
-            userString = userString.concat("|");
-        } else if (play == -1) {
-            sumWinsComputer = sumWinsComputer + (MAX_DIFFERENCE_IN_RESULTS - 1);
-            computersString = computersString.concat("|");
-        }
-
-         System.out.println("You: " + userString +  " Computer: " + computersString);
-    }
-
-
-        if(sumWinsComputer > sumWinsUser){
-            System.out.println("YOU LOOSE");
-        } else{
-            System.out.println("YOU WIN");
-        }
-
-    }
-
     /**method name: playSingleGame
      * method description: simulates rock-scissors-paper game
      * @return true if someone won, false if no-one won
      */
-    private static Integer winnerInSingleGame(){
+    public static Integer winnerInSingleGame(){
         int valueReturn = 0;
         Scanner scanner = new Scanner(System.in);
         Map<Integer, String> namesMap = new HashMap<>();
@@ -75,18 +38,18 @@ public class ScissorsStonePaper {
         //results of playing
         //Rock wins against scissors; paper wins against rock; and scissors wins against paper
         if(user == computer){
-            result = "no winner";
+            result = "no winner this turn";
         } else if(user == 1 && computer == 3){
-            result = "you win";
+            result = "you win this turn";
             userPoints = 1;
         } else if(user == MAX_DIFFERENCE_IN_RESULTS && computer == 1){
-            result = "you win";
+            result = "you win this turn";
             userPoints = 1;
         } else if(user == 3 && computer == MAX_DIFFERENCE_IN_RESULTS){
-            result = "you win";
+            result = "you win this turn";
             userPoints = 1;
         } else {
-            result = "computer wins";
+            result = "computer wins this turn";
             computerPoints = 1;
         }
         //if user wins, return value is 1, if computer wins value is -1, no win = 0
@@ -97,5 +60,29 @@ public class ScissorsStonePaper {
             valueReturn = -1;
         }
         return valueReturn;
+    }
+
+    public static boolean winnerInTheEnd() {
+        int sumWinsUser = 0;
+        int sumWinsComputer = 0;
+        String userString = "";
+        String computersString = "";
+        //game will be played until the difference between user score and computer score is 2
+        while (((sumWinsComputer - sumWinsUser <= ScissorsStonePaper.MAX_DIFFERENCE_IN_RESULTS - 1) && (sumWinsComputer - sumWinsUser >= 0))
+                || ((sumWinsUser - sumWinsComputer <= ScissorsStonePaper.MAX_DIFFERENCE_IN_RESULTS - 1) && (sumWinsUser - sumWinsComputer >= 0))) {
+
+            int play = ScissorsStonePaper.winnerInSingleGame();
+            if (play == 1) {
+                sumWinsUser = sumWinsUser + (ScissorsStonePaper.MAX_DIFFERENCE_IN_RESULTS - 1);
+                userString = userString.concat("|");
+            } else if (play == -1) {
+                sumWinsComputer = sumWinsComputer + (ScissorsStonePaper.MAX_DIFFERENCE_IN_RESULTS - 1);
+                computersString = computersString.concat("|");
+            }
+
+            System.out.println("You: " + userString + " Computer: " + computersString);
+        }
+
+        return sumWinsComputer > sumWinsUser;
     }
 }

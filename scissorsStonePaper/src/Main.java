@@ -1,5 +1,14 @@
 public class Main {
+
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+
+        if(ScissorsStonePaper.winnerInTheEnd()){
+            System.out.println("***************YOU LOOSE THIS GAME***************");
+        } else{
+            System.out.println("***************YOU WIN THIS GAME***************");
+        }
+
     }
 }
