@@ -1,10 +1,13 @@
 package org.example;
 
 public class Main {
-    public static void main(String[] args) {
-        String stringBinary = "10801";
-        BinaryToDecimal binaryToDecimal = new BinaryToDecimal(stringBinary);
+    public static void main(String[] args) throws BinaryFormatException {
+        String stringBinary = "10101";
+        try {
+            BinaryToDecimal binaryToDecimal = new BinaryToDecimal(stringBinary);
+        }catch(BinaryFormatException error){
+            System.out.println("Not a binary");
+        }
 
-        System.out.println(binaryToDecimal.verifyInputIsABinaryNumber(stringBinary));
     }
 }
