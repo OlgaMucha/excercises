@@ -5,7 +5,7 @@ public class Main {
         String stringBinary = "10101";
         try {
             BinaryToDecimal binaryToDecimal = new BinaryToDecimal(stringBinary);
-        }catch(BinaryFormatException error){
+        } catch(BinaryFormatException error){
             System.out.println("Not a binary");
         }
 
