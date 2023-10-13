@@ -1,0 +1,12 @@
+(Count characters, words, and lines in a file) Write a program that will count
+the number of characters, words, and lines in a file. Words are separated by
+whitespace characters. The file name should be passed as a command-line
+argument, as shown:
+
+example output:
+c://excercises/java1 Welcome1.java
+File Welcome1 has
+170 characters
+22 words
+6 lines
+
