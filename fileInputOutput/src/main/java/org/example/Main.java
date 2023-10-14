@@ -18,6 +18,8 @@ public class Main {
         fileWithNumbers.writeIntoFile();
         fileWithNumbers.readFromFile();
 
+        System.out.println();
+
 
     }
 }
