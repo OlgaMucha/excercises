@@ -27,7 +27,6 @@ public class FileWithNumbers {
             }
 
             //creating 100 random numbers
-
             for (int i = 0; i < NUMBER_OF_NUMBERS_IN_FILE; i++) {
                 Random random = new Random();
 

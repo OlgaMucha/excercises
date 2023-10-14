@@ -1,11 +1,6 @@
 package org.example;
 
-
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -17,9 +12,5 @@ public class Main {
 
         fileWithNumbers.writeIntoFile();
         fileWithNumbers.readFromFile();
-
-        System.out.println();
-
-
     }
 }
