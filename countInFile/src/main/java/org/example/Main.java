@@ -8,56 +8,34 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
         {
+            //user entry
+            String fileAsString = input();
+
             // pass the path to the file as a parameter
-            File file = new File("D://SprintApplicationFile.txt");
+            File file = new File(fileAsString);
 
-            //counting lines in file
-            getCountLines(file);
-
-            //counting words in file
-            getCountWords(file);
+            FileCount fileCount = new FileCount(file);
 
             //counting characters in file
-            getCountCharacters(file);
+            fileCount.output(file);
+
         }
     }
-
-    private static void getCountCharacters(File file) throws FileNotFoundException {
-        Scanner scannerToCountCharacters = new Scanner(file);
-        int countLines = getCountLines(file);
-        int countCharacters = 0;
-        for (int i = 0; i < countLines; i++) {
-            while (scannerToCountCharacters.hasNextLine()) {
-                String characters = scannerToCountCharacters.nextLine();
-                countCharacters = characters.length() + countCharacters;
-            }
-        }
-        System.out.println(countCharacters + " characters");
+    
+    public static String input() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter file path and name divided with space");
+        String[] fileDetails = scanner.nextLine().split(" ");
+        String path = fileDetails[0];
+        String name = fileDetails[1];
+        return path.concat(name);
     }
 
-    private static void getCountWords(File file) throws FileNotFoundException {
-        Scanner scannerToCountWords = new Scanner(file);
-        int countLines = getCountLines(file);
-        int countWords = 0;
 
-        for (int i = 0; i < countLines; i++) {
-            while (scannerToCountWords.hasNextLine()) {
-                String[] words = scannerToCountWords.nextLine().split(" ");
-                countWords = words.length + countWords;
-            }
-        }
-        System.out.println(countWords + " words");
-    }
 
-    private static int getCountLines(File file) throws FileNotFoundException {
-        Scanner scannerToCountLines = new Scanner(file);
-        int countLines = 0;
-        while (scannerToCountLines.hasNextLine()) {
-            countLines = countLines + 1;
-        }
 
-        System.out.println(countLines + " lines");
-        return countLines;
-    }
+
+
+
 }
 
