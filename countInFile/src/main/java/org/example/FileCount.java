@@ -30,7 +30,7 @@ public class FileCount {
 
     }
 
-    private int getCountCharacters() throws FileNotFoundException {
+    public int getCountCharacters() throws FileNotFoundException {
         Scanner scannerToCountCharacters = new Scanner(this.file);
         int countLines = getCountLines();
         int countCharacters = 0;

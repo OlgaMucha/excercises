@@ -1,27 +1,20 @@
 package org.example;
 
-import org.junit.Assert;
-
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class FileCountTest {
 
+
     public String setup() throws FileNotFoundException {
         //create file
-        java.io.File file = new java.io.File("welcome.txt");
+        java.io.File file = new java.io.File("java.txt");
 
         java.io.PrintWriter printWriter = new java.io.PrintWriter(file);
-        printWriter.println("Java is een objectgeoriënteerde programmeertaal.");
-        printWriter.println("is een platformonafhankelijke taal die qua syntaxis grotendeels gebaseerd is op de programmeertaal C++.");
-        printWriter.println("Java beschikt echter over een uitgebreidere klassenbibliotheek dan C++.");
+        printWriter.println("Java is een programmeertaal.");
+        printWriter.println("yes");
         printWriter.close();
         return file.getName();
     }
@@ -31,7 +24,7 @@ class FileCountTest {
         String fileName = setup();
         File file = new File(fileName);
         FileCount fileCount = new FileCount(file);
-        assertEquals(fileCount.getCountLines(), 3);
+        assertEquals(fileCount.getCountLines(), 2);
     }
 
     @Test
@@ -39,6 +32,14 @@ class FileCountTest {
         String fileName = setup();
         File file = new File(fileName);
         FileCount fileCount = new FileCount(file);
-        assertEquals(fileCount.getCountWords(), 28);
+        assertEquals(fileCount.getCountWords(), 5);
+    }
+
+    @Test
+    void test_getCountLines_countDataInFileWelcomeCharacters() throws FileNotFoundException {
+        String fileName = setup();
+        File file = new File(fileName);
+        FileCount fileCount = new FileCount(file);
+        assertEquals(fileCount.getCountCharacters(), 31);
     }
 }
