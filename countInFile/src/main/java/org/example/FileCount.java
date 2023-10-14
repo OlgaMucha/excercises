@@ -18,7 +18,7 @@ public class FileCount {
         return file;
     }
 
-    private int getCountLines() throws FileNotFoundException {
+    public int getCountLines() throws FileNotFoundException {
         Scanner scannerToCountLines = new Scanner(this.file);
         int countLines = 0;
         while (scannerToCountLines.hasNextLine()) {
@@ -44,7 +44,7 @@ public class FileCount {
         return countCharacters;
     }
 
-    private int getCountWords() throws FileNotFoundException {
+    public int getCountWords() throws FileNotFoundException {
         Scanner scannerToCountWords = new Scanner(this.file);
         int countLines = getCountLines();
         int countWords = 0;

@@ -21,7 +21,7 @@ public class Main {
 
         }
     }
-    
+
     public static String input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter file path and name divided with space");
