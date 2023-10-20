@@ -17,6 +17,22 @@ public class ReplaceTextInFile {
         this.newText = newText;
     }
 
+    public String getOldFilePath() {
+        return oldFilePath;
+    }
+
+    public String getFileText() {
+        return fileText;
+    }
+
+    public String getOldText() {
+        return oldText;
+    }
+
+    public String getNewText() {
+        return newText;
+    }
+
     //creating text file with given text
     private static void createFile(String filePath, String fileText) throws FileNotFoundException {
         java.io.File file = new java.io.File(filePath);
@@ -66,7 +82,6 @@ public class ReplaceTextInFile {
 
     private String buildNewFilePath(String oldFilePath, String oldWord, String newWord) {
         String fileWithoutExtension = oldFilePath.replace(".txt","");
-
         return fileWithoutExtension.concat("Replaced"+ firstLetterOfStringToUpperCase(oldWord)+"With"+firstLetterOfStringToUpperCase(newWord));
     }
 
