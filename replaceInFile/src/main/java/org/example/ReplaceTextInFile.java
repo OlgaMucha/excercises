@@ -19,9 +19,12 @@ public class ReplaceTextInFile {
         this.newWord = newWord;
     }
 
-    //create file if it doesn't exist
+    //creating text file with given text
     public void createFile(String filePath, String fileText) throws FileNotFoundException {
         java.io.File file = new java.io.File(filePath);
+        if(file.exists()){
+            System.out.println("file exists");
+        }
 
         java.io.PrintWriter output = new java.io.PrintWriter(file);
 
@@ -30,26 +33,33 @@ public class ReplaceTextInFile {
         output.close();
     }
 
-    public void searchAndReplaceStringAndSavingTextToNewFile(String oldWord, String newWord, String filePath, String targetFilePath) throws FileNotFoundException {
-        java.io.File fileOld = new java.io.File(filePath);
-        java.io.File fileNew = new java.io.File(targetFilePath);
-        Scanner scanner = new Scanner(fileOld);
-        java.io.PrintWriter printWriter = new java.io.PrintWriter(fileNew);
-        while (scanner.hasNext()) {
-            String s1 = scanner.nextLine();                         //old file as String
-            String s2 = s1.replace(oldWord, newWord);    //replacing strings
-            printWriter.println(s2);                                //new file as String
+    public void searchAndReplaceStringAndSavingTextToNewFile(String oldWord, String newWord, String filePath, String targetFilePath) {
+        Boolean replaced = false;
+        try {
+            java.io.File fileOld = new java.io.File(filePath);                      //create old file
+            java.io.File fileNew = new java.io.File(targetFilePath);                //crete new file
+            Scanner scanner = new Scanner(fileOld);                                 //old file open for reading with scanner
+            java.io.PrintWriter printWriter = new java.io.PrintWriter(fileNew);     //new file open for writing with printWriter
+
+            while (scanner.hasNext()) {                                             //for all lines in the old file
+                String s1 = scanner.nextLine();                                         //each line saved in string
+                String s2 = s1.replace(oldWord, newWord);                               //and replacing is being done in this line
+                printWriter.println(s2);                                                //new line is saved into the new file
+                if(!s1.equals(s2)){
+                    replaced = true;
+                }
+            }
+
+            printWriter.close();                                                    //new file is now closed for writing
+            if(replaced){
+                System.out.println("Replacing done");
+            }else {
+                System.out.println("Nothing to replace");
+            }
+
+        }   catch(FileNotFoundException fnf){
+            System.out.println(fnf.getMessage());
         }
-
-        printWriter.close();
     }
-
-
-
-    //searched word
-    //read file - find all occurrences of the word
-    //write file - replace all occurrences with new word
-
-
 
 }
