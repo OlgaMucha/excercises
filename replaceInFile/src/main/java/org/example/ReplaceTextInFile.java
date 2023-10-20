@@ -1,26 +1,24 @@
 package org.example;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReplaceTextInFile {
     public String oldFilePath;
-    public String newFilePath;
     public String fileText;
-    public String oldWord;
-    public String newWord;
+    public String oldText;
+    public String newText;
 
-    public ReplaceTextInFile(String oldFilePath, String newFilePath, String fileText, String oldWord, String newWord) {
+
+    public ReplaceTextInFile(String oldFilePath, String fileText, String oldText, String newText) {
         this.oldFilePath = oldFilePath;
-        this.newFilePath = newFilePath;
         this.fileText = fileText;
-        this.oldWord = oldWord;
-        this.newWord = newWord;
+        this.oldText = oldText;
+        this.newText = newText;
     }
 
     //creating text file with given text
-    public void createFile(String filePath, String fileText) throws FileNotFoundException {
+    private static void createFile(String filePath, String fileText) throws FileNotFoundException {
         java.io.File file = new java.io.File(filePath);
         if(file.exists()){
             System.out.println("file exists");
@@ -33,11 +31,13 @@ public class ReplaceTextInFile {
         output.close();
     }
 
-    public void searchAndReplaceStringAndSavingTextToNewFile(String oldWord, String newWord, String filePath, String targetFilePath) {
-        Boolean replaced = false;
+    public boolean searchAndReplaceStringAndSavingTextToNewFile(String oldWord, String newWord, String filePath, String fileText) throws FileNotFoundException {
+        createFile(filePath, fileText);
+        boolean replaced = false;
         try {
             java.io.File fileOld = new java.io.File(filePath);                      //create old file
-            java.io.File fileNew = new java.io.File(targetFilePath);                //crete new file
+            String newFilePath = buildNewFilePath(filePath, oldWord, newWord);
+            java.io.File fileNew = new java.io.File(newFilePath);                //crete new file
             Scanner scanner = new Scanner(fileOld);                                 //old file open for reading with scanner
             java.io.PrintWriter printWriter = new java.io.PrintWriter(fileNew);     //new file open for writing with printWriter
 
@@ -60,6 +60,18 @@ public class ReplaceTextInFile {
         }   catch(FileNotFoundException fnf){
             System.out.println(fnf.getMessage());
         }
+
+        return replaced;
+    }
+
+    private String buildNewFilePath(String oldFilePath, String oldWord, String newWord) {
+        String fileWithoutExtension = oldFilePath.replace(".txt","");
+
+        return fileWithoutExtension.concat("Replaced"+ firstLetterOfStringToUpperCase(oldWord)+"With"+firstLetterOfStringToUpperCase(newWord));
+    }
+
+    private String firstLetterOfStringToUpperCase(String string){
+        return string.substring(0, 1).toUpperCase()+string.substring(1).toLowerCase();
     }
 
 }

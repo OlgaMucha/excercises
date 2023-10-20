@@ -22,19 +22,18 @@ public class Main {
 
     public static void main(String[] args) throws java.io.IOException {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Give word you want to replace: ");
+        String wordToReplace = scanner.nextLine();
+        System.out.print("Give word you want the word to be replaced with: ");
+        String replacingWord = scanner.nextLine();
 
-        String wordToReplace = "nOga";
-        String replacingWord = "DUMMY";
         String filePathOld = "oldFile.txt";
-        String filePathNew = "newFile.txt";
 
-        ReplaceTextInFile replaceTextInFile = new ReplaceTextInFile(filePathOld, filePathNew, TEXT_IN_FILE, wordToReplace, replacingWord);
-
-        //creating file with given text
-        replaceTextInFile.createFile(filePathOld, TEXT_IN_FILE);
+        ReplaceTextInFile replaceTextInFile = new ReplaceTextInFile(filePathOld, TEXT_IN_FILE, wordToReplace, replacingWord);
 
         //creating new file as copy of the old one but with replaced given word with  new one
-        replaceTextInFile.searchAndReplaceStringAndSavingTextToNewFile(wordToReplace, replacingWord, filePathOld, filePathNew);
+        replaceTextInFile.searchAndReplaceStringAndSavingTextToNewFile(wordToReplace, replacingWord, filePathOld, TEXT_IN_FILE);
     }
 }
 
