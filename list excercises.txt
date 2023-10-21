@@ -100,3 +100,8 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	save the change into the original file. For example, invoking
 	java Exercise12_16 file oldString newString
 	replaces oldString in the source file with newString.
+
+038. (Data sorted?) Write a program that reads the strings from file SortedStrings.txt
+	and reports whether the strings in the files are stored in increasing order. If the
+	strings are not sorted in the file, it displays the first two strings that are out of
+	the order.

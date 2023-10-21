@@ -5,381 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cceda0e3-b275-45d4-9f61-488480523c5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/ConvertToUpperCase.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/out/production/ConvertToUpperCase/ConvertToUpperCase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/out/production/ConvertToUpperCase/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/src/ConvertToUpperCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConvertToUpperCase/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/CostOfShipping.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/out/production/CostOfShipping/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/out/production/CostOfShipping/ShippingCost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CostOfShipping/src/ShippingCost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/src/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/src/main/java/org/example/BinaryFormatException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/src/main/java/org/example/BinaryToDecimal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/src/test/java/org/example/BinaryToDecimalTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/target/classes/org/example/BinaryFormatException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/target/classes/org/example/BinaryToDecimal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/binaryFormatException/target/test-classes/org/example/BinaryToDecimalTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/src/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/src/main/java/org/example/ArrayRandomNumbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/src/test/java/org/example/ArrayRandomNumbersTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/target/classes/org/example/ArrayRandomNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/indexOutOfBounds/target/test-classes/org/example/ArrayRandomNumbersTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/src/main/java/org/example/SumOfTwoNumbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/src/main/resources/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/target/classes/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exceptions/inputMismatchExceptionUserInput/target/classes/org/example/SumOfTwoNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/IntegerInList.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/out/production/IntegerInList/IntegerInList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/out/production/IntegerInList/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/src/IntegerInList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntegerInList/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/ReverseString.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/out/production/ReverseString/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/out/production/ReverseString/StringBuilderCl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReverseString/src/StringBuilderCl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/SumOfDigits.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/out/production/SumOfDigits/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/out/production/SumOfDigits/SumOfDigits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SumOfDigits/src/SumOfDigits.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/areaCalculations.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/out/production/areaCalculations/Areas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/out/production/areaCalculations/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/src/Areas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../areaCalculations/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/asciiCode.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/out/production/asciiCode/AsciiCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/out/production/asciiCode/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/src/AsciiCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../asciiCode/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/src/main/java/org/example/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/src/main/resources/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/src/test/java/org/example/StudentTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/target/classes/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/target/classes/org/example/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignGrades/target/test-classes/org/example/StudentTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/binaryToDec.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/out/production/binaryToDec/BinaryToDecimal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/out/production/binaryToDec/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/src/BinaryToDecimal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../binaryToDec/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/compareCost.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/out/production/compareCost/ComparePrice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/out/production/compareCost/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/src/ComparePrice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../compareCost/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/conversionCToFAndFToC.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/out/production/conversionCToFAndFToC/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/out/production/conversionCToFAndFToC/TemperatureConversion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conversionCToFAndFToC/src/TemperatureConversion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/java.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/src/main/java/org/example/FileCount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/src/main/resources/description" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/src/test/java/org/example/FileCountTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/target/classes/description" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/target/classes/org/example/FileCount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../countInFile/target/test-classes/org/example/FileCountTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/distancePoints.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/out/production/distancePoints/DistanceTwoPoints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/out/production/distancePoints/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/src/DistanceTwoPoints.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../distancePoints/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercise.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileWithNumbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/FileWithNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/highestScore.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/out/production/highestScore/HighestScore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/out/production/highestScore/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/src/HighestScore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../highestScore/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../indexOutOfBounds/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/leapYEars.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/out/production/leapYEars/LeapYears.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/out/production/leapYEars/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/src/LeapYears.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leapYEars/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/out/production/untitled/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/out/production/untitled/letterGradeToNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/src/letterGradeToNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../letterToGrade/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/longestCommonPrefix.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/out/production/longestCommonPrefix/LongestCommonPrefix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/out/production/longestCommonPrefix/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/src/LongestCommonPrefix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../longestCommonPrefix/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/lottery.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/out/production/lottery/Lottery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/out/production/lottery/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/src/Lottery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lottery/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/multiplicationQuiz.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/out/production/multiplicationQuiz/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/out/production/multiplicationQuiz/MultiplicationQuiz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../multiplicationQuiz/src/MultiplicationQuiz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/noTriples.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/out/production/noTriples/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/out/production/noTriples/NoTriples.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/out/production/noTriples/description" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/src/NoTriples.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../noTriples/src/description" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/numberOfDaysInMonth.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/out/production/numberOfDaysInMonth/DaysInMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/out/production/numberOfDaysInMonth/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/src/DaysInMonth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../numberOfDaysInMonth/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/src/main/java/org/example/Password.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/src/test/java/org/example/PasswordTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/target/classes/org/example/Password.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../passwordCheck/target/test-classes/org/example/PasswordTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/out/production/pentagonArea/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/out/production/pentagonArea/PentagonArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/pentagonArea.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonArea/src/PentagonArea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/out/production/pentagonalNumbers/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/out/production/pentagonalNumbers/PentagonalNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/out/production/pentagonalNumbers/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/pentagonalNumbers.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/src/PentagonalNumbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pentagonalNumbers/src/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/out/production/primeNumbers/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/out/production/primeNumbers/PrimeNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/primeNumbers.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../primeNumbers/src/PrimeNumbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../randomColor/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../randomColor/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../randomColor/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../randomColor/out/production/randomColor/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../randomColor/randomColor.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../randomColor/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/out/production/regexSocialSecurityNumber/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/out/production/regexSocialSecurityNumber/SSNCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/regexSocialSecurityNumber.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../regexSocialSecurityNumber/src/SSNCheck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/oldFile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/oldFileReplacedBookWithLeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/src/main/java/org/example/ReplaceTextInFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/src/main/resources/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/src/test/java/org/example/ReplaceTextInFileTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/target/classes/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/target/classes/org/example/ReplaceTextInFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/target/test-classes/org/example/ReplaceTextInFileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/test1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/test1Replaced WithX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../replaceInFile/test1ReplacedDogsWithCats" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/out/production/scissorsStonePaper/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/out/production/scissorsStonePaper/ScissorsStonePaper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/out/production/scissorsStonePaper/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/scissorsStonePaper.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/src/ScissorsStonePaper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scissorsStonePaper/src/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/out/production/substring/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/out/production/substring/Substring.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/src/Substring.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../substring/substring.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/out/production/sumDigitsInteger/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/out/production/sumDigitsInteger/SumDigitsInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/src/SumDigitsInteger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumDigitsInteger/sumDigitsInteger.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/out/production/sumOfSeries/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/out/production/sumOfSeries/SumOfSeries.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/src/SumOfSeries.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sumOfSeries/sumOfSeries.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/out/production/zellersCongruence/DayOfTheWeek.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/out/production/zellersCongruence/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/src/DayOfTheWeek.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zellersCongruence/zellersCongruence.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/Exercise.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/src/main/java/org/example/FileWithNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/src/main/resources/description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/target/classes/description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/target/classes/org/example/FileWithNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../035. fileInputOutput/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/oldFile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/oldFileReplacedBookWithLeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/src/main/java/org/example/ReplaceTextInFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/src/main/resources/description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/src/test/java/org/example/ReplaceTextInFileTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/target/classes/description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/target/classes/org/example/ReplaceTextInFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/target/test-classes/org/example/ReplaceTextInFileTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/test1Replaced WithX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../036. replaceInFile/test1ReplacedDogsWithCats" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../list excercises.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../list excercises.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,7 +123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697285825081</updated>
-      <workItem from="1697908155960" duration="321000" />
+      <workItem from="1697908155960" duration="783000" />
     </task>
     <servers />
   </component>
