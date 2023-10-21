@@ -1,0 +1,11 @@
+
+R
+java:S1481	"7Remove this unused "resultOutputToUser" local variable.(Àô‹žþÿÿÿÿ
+@
+java:S1197"*Move the array designators [] to the type.(ÂòŸŠ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ôüƒ®ùÿÿÿÿ
+E
+java:S1197"*Move the array designators [] to the type.(ë¾ÿ×ýÿÿÿÿ
+t
+java:S2234,"^Parameters to outputToUser have the same names but not the same order as the method arguments.(ªÁ´ð
+M	java:S106;"9Replace this use of System.out or System.err by a logger.(ÝïÀ;

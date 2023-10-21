@@ -1,0 +1,25 @@
+
+r
+java:S1488D"\Immediately return this expression instead of assigning it to the temporary variable "area".(ø¿¶Ï
+w
+java:S1488V"\Immediately return this expression instead of assigning it to the temporary variable "area".(¹£åøøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(â¨ØÒ
+S	java:S106	"9Replace this use of System.out or System.err by a logger.(Ş†­³ûÿÿÿÿ
+S	java:S106
+"9Replace this use of System.out or System.err by a logger.(ÏÆ×¾ÿÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(üşâ¡ÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ô¢Ô
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‰¯­ˆ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(ô¤„å
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(Çùñ—üÿÿÿÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(ñ›—ïüÿÿÿÿ
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(í½¬²
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(ñ›—ïüÿÿÿÿ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(‹È±øÿÿÿÿ
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(í½¬²
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(ÌøÁš
+N	java:S106>"9Replace this use of System.out or System.err by a logger.(Ã¡üç
+N	java:S106B"9Replace this use of System.out or System.err by a logger.(âÚô‚
+S	java:S106J"9Replace this use of System.out or System.err by a logger.(Ìßì•øÿÿÿÿ
+N	java:S106N"9Replace this use of System.out or System.err by a logger.(“Òı
+S	java:S106T"9Replace this use of System.out or System.err by a logger.(Ù•â«ÿÿÿÿÿ

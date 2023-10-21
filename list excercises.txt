@@ -1,0 +1,102 @@
+001.  -
+
+002. Loting of the random color of the rainbow
+
+003. Calculating of the umber of days in given month + year
+
+004. There are 5 multipliction questions asked and nswer is % of good answers
+
+005. computer lotes 3 random digits where 1 can't be 0, user enters 3 digits,
+	check if all digit of both user and random are equal and in this same order.If yes - HUGE WIN!!!! $12.000!!!,
+	if this same digits but different order BIG WIN!!!! $5.000!!!, if 1 digit this same You win $1000!!", otherwise no win
+
+006. Reverse string given by user
+
+007. Checking if the by the user entered number is in array, if yes returning the position number. If the number entered is not in the array 	returning -1
+
+
+
+026. (Game: scissor, rock, paper) Programming Exercise 3.17 gives a program that
+        plays the scissors–rock–paper game. Revise the program to let the user continuously
+        play until either the user or the computer wins more than two times than its
+        opponent.
+        Rock wins against scissors; paper wins against rock; and scissors wins against paper.
+
+027. Given an array of ints, we'll say that a triple is a value appearing 3 times in the array.
+    Return true if the array does not contain any triples.
+
+028. (The longest common prefix) Write a program that prompts the user to enter two
+	strings and displays the largest common prefix of the two strings. Here are some
+	sample runs:
+Enter the first string: Welcome to C++
+Enter the second string: Welcome to programming
+The common prefix is Welcome to
+Enter the first string: Atlanta
+Enter the second string: Macon
+Atlanta and Macon have no common prefix
+
+029.  (Math: pentagonal numbers) A pentagonal number is defined as n(3n-1)/2 for
+    n = 1, 2, . . ., and so on. Therefore, the first few numbers are 1, 5, 12, 22, ... .
+    Write a method with the following header that returns a pentagonal number:
+    public static int getPentagonalNumber(int n)
+    For example, getPentagonalNumber(1) returns 1 and getPentagonalNumber(
+    2) returns 5. Write a test program that uses this method to display the first
+    100 pentagonal numbers with 10 numbers on each line. Use the %7d format to
+    display each number.
+
+030. (Sum the digits in an integer) Write a method that computes the sum of the digits
+in an integer. Use the following method header:
+public static int sumDigits(long n)
+For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
+
+031. (Check password) Some Websites impose certain rules for passwords. Write a
+        method that checks whether a string is a valid password. Suppose the password
+        rules are as follows:
+        ■■ A password must have at least eight characters.
+        ■■ A password must contain only letters and digits.
+        ■■ A password must contain at least two digits.
+        Write a program that prompts the user to enter a password and displays Valid
+        Password if the rules are followed, or Invalid Password otherwise.
+
+032. (Assign grades) Write a program that reads student scores, gets the best score, and
+	then assigns grades based on the following scheme:
+	Grade is A if score is Ú best -10;
+	Grade is B if score is Ú best -20;
+	Grade is C if score is Ú best -30;
+	Grade is D if score is Ú best -40;
+	Grade is F otherwise.
+	The program prompts the user to enter the total number of students, then prompts
+	the user to enter all of the scores, and concludes by displaying the grades.
+
+033. (BinaryFormatException)
+	Implement the bin2Dec method
+	to throw a BinaryFormatException if the string is not a binary string. Define
+	a custom exception called BinaryFormatException. Implement the bin2Dec
+	method to throw a BinaryFormatException if the string is not a binary string.
+
+034. (ArrayIndexOutOfBoundsException)
+	Write a program that meets the following requirements:
+	■■ Creates an array with 100 randomly chosen integers.
+	■■ Prompts the user to enter the index of the array, then displays the corresponding
+	element value. If the specified index is out of bounds, display the
+	message "Out of Bounds".
+
+035. (Count characters, words, and lines in a file) Write a program that will count
+	the number of characters, words, and lines in a file. Words are separated by
+	whitespace characters. The file name should be passed as a command-line
+	argument, as shown:
+
+	example output:
+	c://excercises/java1 Welcome1.java
+	File Welcome1 has
+	170 characters
+	22 words
+	6 lines
+
+036. 100 random integers entered in the txt file
+
+037. (Replace text) ReplaceText.java, gives a program that replaces
+	text in a source file and saves the change into a new file. Revise the program to
+	save the change into the original file. For example, invoking
+	java Exercise12_16 file oldString newString
+	replaces oldString in the source file with newString.
