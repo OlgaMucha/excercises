@@ -16,6 +16,5 @@ public class Main {
         StringsReader stringsReader = new StringsReader(path);
 
         stringsReader.printResults();
-
     }
 }

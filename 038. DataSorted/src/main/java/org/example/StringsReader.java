@@ -20,10 +20,11 @@ public class StringsReader {
      * saves words from the file in array list of words
      * @return ArrayList<String> array list with words in the file
      */
-    private ArrayList<String> readStringsFromFile() throws FileNotFoundException {
+    public ArrayList<String> readStringsFromFile() throws FileNotFoundException {
         java.io.File file = new java.io.File(this.path);
         Scanner scanner = new Scanner(file);
         ArrayList<String> wordsArrayList = new ArrayList<>();
+
         while (scanner.hasNext()) {
             String[] words = scanner.next().split(" ");
             wordsArrayList.addAll(List.of(words));
@@ -36,7 +37,7 @@ public class StringsReader {
      * in incorrect order
      * @return incorrectStrings
      */
-    private String[] checkIfArrayStringsIsSorted(ArrayList<String> arrayStrings){
+    public String[] checkIfArrayStringsIsSorted(ArrayList<String> arrayStrings){
 
         ArrayList<String> wordsArrayListSorted = new ArrayList<>(arrayStrings);
 
@@ -56,7 +57,6 @@ public class StringsReader {
 
     /**printResults
      * method prints or Array sorted correctly or gives strings in incorrect order
-     * @throws FileNotFoundException
      */
     public void printResults() throws FileNotFoundException {
         ArrayList<String> wordsArrayList = readStringsFromFile();
