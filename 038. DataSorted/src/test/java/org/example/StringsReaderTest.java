@@ -28,7 +28,7 @@ class StringsReaderTest {
     }
 
     @Test
-    void test_checkIfArrayStringsIsSorted_forEmptyFileWillReturnSorted() throws FileNotFoundException {
+    void test_readStringsFromFile_forEmptyFileWillReturnSorted() throws FileNotFoundException {
         java.io.File file = new java.io.File("test2.txt");
         java.io.PrintWriter pw = new java.io.PrintWriter(file);
         pw.close();
@@ -39,6 +39,18 @@ class StringsReaderTest {
     }
 
     @Test
-    void test_testPrintResults() {
+    void test_checkIfArrayStringsIsSorted_returnsArrayWithStringsNotInOrder() throws FileNotFoundException {
+        ArrayList<String> arrayList3 = new ArrayList<>(Arrays.asList("alpha", "character", "beta"));
+        String[] result3 = {"character", "beta"};
+        Assertions.assertArrayEquals(StringsReader.checkIfArrayStringsIsSorted(arrayList3), result3);
     }
+
+    @Test
+    void test_checkIfArrayStringsIsSorted_returnsNullIfArrayIsSorted() throws FileNotFoundException {
+        ArrayList<String> arrayList3 = new ArrayList<>(Arrays.asList("alpha", "beta", "character"));
+        String[] result3 = null;
+        Assertions.assertArrayEquals(StringsReader.checkIfArrayStringsIsSorted(arrayList3), result3);
+    }
+
+
 }

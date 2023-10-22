@@ -37,7 +37,7 @@ public class StringsReader {
      * in incorrect order
      * @return incorrectStrings
      */
-    public String[] checkIfArrayStringsIsSorted(ArrayList<String> arrayStrings){
+    public static String[] checkIfArrayStringsIsSorted(ArrayList<String> arrayStrings){
 
         ArrayList<String> wordsArrayListSorted = new ArrayList<>(arrayStrings);
 
