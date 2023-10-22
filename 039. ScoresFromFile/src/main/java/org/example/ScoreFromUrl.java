@@ -44,7 +44,7 @@ public class ScoreFromUrl {
         return scoresAsStringArrayList;
     }
 
-    private ArrayList<Integer> convertArrayListStringToInteger(ArrayList<String> arrayListString){
+    protected ArrayList<Integer> convertArrayListStringToInteger(ArrayList<String> arrayListString){
         ArrayList<Integer> arrayListInteger = new ArrayList<>();
         for(String string: arrayListString){
             arrayListInteger.add(Integer.parseInt(string));
@@ -52,7 +52,10 @@ public class ScoreFromUrl {
         return arrayListInteger;
     }
 
-    public double[] calculateAverageScoreAndTotalOfGivenScores(ArrayList<Integer> scores){
+    protected double[] calculateAverageScoreAndTotalOfGivenScores(ArrayList<Integer> scores){
+        if(scores == null){
+            return new double[]{0,0};
+        }
         int sum = 0;
         double average;
         for(Integer score: scores){
