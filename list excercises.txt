@@ -105,3 +105,8 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	and reports whether the strings in the files are stored in increasing order. If the
 	strings are not sorted in the file, it displays the first two strings that are out of
 	the order.
+
+039. (Process scores in a text file on the Web) Suppose the text file on the Web
+	http://liveexample.pearsoncmg.com/data/Scores.txt contains an unspecified
+	number of scores separated by spaces. Write a program that reads the scores
+	from the file and displays their total and average.
