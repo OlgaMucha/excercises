@@ -1,0 +1,4 @@
+(Process scores in a text file on the Web) Suppose the text file on the Web
+	http://liveexample.pearsoncmg.com/data/Scores.txt contains an unspecified
+	number of scores separated by spaces. Write a program that reads the scores
+	from the file and displays their total and average.

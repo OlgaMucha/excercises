@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Score {
+public class ScoreFromUrl {
     private String urlPath;
 
-    public Score(String urlPath) {
+    public ScoreFromUrl(String urlPath) {
         this.urlPath = urlPath;
     }
 
@@ -21,21 +21,27 @@ public class Score {
      * @return Array with sum on the first position and average on the second
      */
     public double[] readScoresFromUrlToArrayAndCalculatesAverageAndSum() {
-        String[] scoresAsStringArray = null;
-        ArrayList<String> scoresAsStringArrayList = new ArrayList<>();
+        ArrayList<String> scoresAsStringArrayList;
         try {
-            java.net.URL url = new java.net.URL(this.urlPath);
-
-            Scanner scanner = new Scanner(url.openStream());
-            while (scanner.hasNext()) {
-                scoresAsStringArray = scanner.nextLine().split(" ");
-                scoresAsStringArrayList.addAll(Arrays.asList(scoresAsStringArray));
-            }
+            scoresAsStringArrayList = readStringsFromUrlAndEnterToArrayList();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         ArrayList<Integer> arrayIntegers = convertArrayListStringToInteger(scoresAsStringArrayList);
-        return calculateAverageScoreOfGivenScores(arrayIntegers);
+        return calculateAverageScoreAndTotalOfGivenScores(arrayIntegers);
+    }
+
+    private ArrayList<String> readStringsFromUrlAndEnterToArrayList() throws IOException {
+        String[] scoresAsStringArray;
+        ArrayList<String> scoresAsStringArrayList = new ArrayList<>();
+        java.net.URL url = new java.net.URL(this.urlPath);
+
+        Scanner scanner = new Scanner(url.openStream());
+        while (scanner.hasNext()) {
+            scoresAsStringArray = scanner.nextLine().split(" ");
+            scoresAsStringArrayList.addAll(Arrays.asList(scoresAsStringArray));
+        }
+        return scoresAsStringArrayList;
     }
 
     private ArrayList<Integer> convertArrayListStringToInteger(ArrayList<String> arrayListString){
@@ -46,9 +52,9 @@ public class Score {
         return arrayListInteger;
     }
 
-    private double[] calculateAverageScoreOfGivenScores(ArrayList<Integer> scores){
+    public double[] calculateAverageScoreAndTotalOfGivenScores(ArrayList<Integer> scores){
         int sum = 0;
-        double average = 0;
+        double average;
         for(Integer score: scores){
             sum = sum + score;
         }
