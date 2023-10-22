@@ -2,32 +2,41 @@ package org.example;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class StringsReader {
-    String path = "src/main/resources/SortedStrings.txt";
+    public String path;
 
-    //(Data sorted?) Write a program that reads the strings from file SortedStrings.txt
-    //and reports whether the strings in the files are stored in increasing order. If the
-    //strings are not sorted in the file, it displays the first two strings that are out of
-    //the order.
+    public StringsReader(String path) {
+        this.path = path;
+    }
 
-    public ArrayList<String> readStringsFromFile() throws FileNotFoundException {
-        java.io.File file = new java.io.File(path);
+    public String getPath() {
+        return path;
+    }
+
+    /**method: readStringsFromFile
+     * saves words from the file in array list of words
+     * @return ArrayList<String> array list with words in the file
+     */
+    private ArrayList<String> readStringsFromFile() throws FileNotFoundException {
+        java.io.File file = new java.io.File(this.path);
         Scanner scanner = new Scanner(file);
         ArrayList<String> wordsArrayList = new ArrayList<>();
         while (scanner.hasNext()) {
             String[] words = scanner.next().split(" ");
             wordsArrayList.addAll(List.of(words));
         }
-
         return wordsArrayList;
-
     }
 
-    public String[] checkIfArrayStringsIsSorted(ArrayList<String> arrayStrings){
+    /**method: checkIfArrayStringsIsSorted
+     * checks if given array list is sorted, if yes returning null, if no returning array with two elements
+     * in incorrect order
+     * @return incorrectStrings
+     */
+    private String[] checkIfArrayStringsIsSorted(ArrayList<String> arrayStrings){
 
         ArrayList<String> wordsArrayListSorted = new ArrayList<>(arrayStrings);
 
@@ -43,6 +52,21 @@ public class StringsReader {
         }
 
         return incorrectStrings;
+    }
+
+    /**printResults
+     * method prints or Array sorted correctly or gives strings in incorrect order
+     * @throws FileNotFoundException
+     */
+    public void printResults() throws FileNotFoundException {
+        ArrayList<String> wordsArrayList = readStringsFromFile();
+        String[] array = checkIfArrayStringsIsSorted(wordsArrayList);
+        if(array==null){
+            System.out.println("Array sorted correctly");
+        }else{
+            System.out.println("First strings in incorrect order: " + array[0] + ", " + array[1]);
+        }
+
     }
 
 }
