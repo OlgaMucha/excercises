@@ -28,9 +28,9 @@ public class Main {
 
     private static double calculateSalaryPerRole(Role roleEnum) {
         return switch (roleEnum) {
-            case Assistant -> getRandomNumber(MIN_SALARY_ASSISTANT, MAX_SALARY_ASSISTANT);
-            case Associate -> getRandomNumber(MIN_SALARY_ASSOCIATE, MAX_SALARY_ASSOCIATE);
-            case Full -> getRandomNumber(MIN_SALARY_FULL_PROFESSOR, MAX_SALARY_FULL_PROFESSOR);
+            case assistant -> getRandomNumber(MIN_SALARY_ASSISTANT, MAX_SALARY_ASSISTANT);
+            case associate -> getRandomNumber(MIN_SALARY_ASSOCIATE, MAX_SALARY_ASSOCIATE);
+            case full -> getRandomNumber(MIN_SALARY_FULL_PROFESSOR, MAX_SALARY_FULL_PROFESSOR);
         };
 
     }

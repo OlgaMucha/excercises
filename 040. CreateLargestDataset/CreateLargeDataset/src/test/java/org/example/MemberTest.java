@@ -9,8 +9,8 @@ class MemberTest {
 
     @Test
     void test_equals() {
-        Member member1 = new Member("Olga", "Oost", Role.Assistant, 200000);
-        Member member2 = new Member("Olga", "Oost", Role.Assistant, 200000);
+        Member member1 = new Member("Olga", "Oost", Role.assistant, 200000);
+        Member member2 = new Member("Olga", "Oost", Role.assistant, 200000);
 
         Assertions.assertEquals(member1, member1);
     }
@@ -18,14 +18,14 @@ class MemberTest {
     @Test
     void test_constructor_ZeroSalaryThrowsIllegalArgumentException(){
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            new Member("Olga","Oost",Role.Assistant,0);
+            new Member("Olga","Oost",Role.assistant,0);
         });
     }
 
     @Test
     void test_constructor_negativeSalaryThrowsIllegalArgumentException(){
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            new Member("Olga","Oost",Role.Assistant,-1000);
+            new Member("Olga","Oost",Role.assistant,-1000);
         });
     }
 }

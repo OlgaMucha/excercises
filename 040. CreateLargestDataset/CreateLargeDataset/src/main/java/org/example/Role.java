@@ -2,9 +2,9 @@ package org.example;
 
 public enum Role {
 
-    Associate,
-    Assistant,
-    Full;
+    associate,
+    assistant,
+    full;
 
     /**method: enumMethod()
      * method getting random role from 3 roles: Associate, Assistant and Full (for Full Professor)
@@ -17,9 +17,9 @@ public enum Role {
         int random = lower + (int)(Math.random() * ((upper - lower) + 1));
 
         return switch (random) {
-            case 1 -> Role.Assistant;
-            case 2 -> Role.Associate;
-            case 3 -> Role.Full;
+            case 1 -> Role.assistant;
+            case 2 -> Role.associate;
+            case 3 -> Role.full;
             default -> null;
         };
     }
