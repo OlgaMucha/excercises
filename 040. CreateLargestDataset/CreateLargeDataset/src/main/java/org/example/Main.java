@@ -1,5 +1,7 @@
 package org.example;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Main {
@@ -11,18 +13,25 @@ public class Main {
     public static final int MIN_SALARY_FULL_PROFESSOR = 75000;
     public static final int MAX_SALARY_FULL_PROFESSOR = 130000;
 
-    public static void main(String[] args) {
-        ArrayList<Member> members = new ArrayList<>();
+    public static void main(String[] args) throws FileNotFoundException {
 
-        for (int i = 0; i < 100; i++) {
+        java.io.File file = new File("dataset.txt");
+        try {
+            java.io.PrintWriter printWriter = new java.io.PrintWriter(file);
 
-            Member member = new Member();
-            member.setFirstName("Firstname" + (i+1));
-            member.setLastName("Lastname" + (i+1));
-            member.setRoleEnum(Role.enumMethod());
-            member.setSalary(calculateSalaryPerRole(member.getRoleEnum()));
 
-            members.add(member);
+            for (int i = 0; i < 1000; i++) {
+
+                Member member = new Member();
+                member.setFirstName("Firstname" + (i + 1));
+                member.setLastName("Lastname" + (i + 1));
+                member.setRoleEnum(Role.enumMethod());
+                member.setSalary(calculateSalaryPerRole(member.getRoleEnum()));
+                printWriter.println(member.getFirstName() + " " + member.getLastName() + " " + member.getRoleEnum() + " " + member.getSalary());
+            }
+
+        } catch (FileNotFoundException err) {
+            System.out.println(err.getMessage());
         }
     }
 

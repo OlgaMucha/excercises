@@ -57,5 +57,17 @@ public class Member {
         }
         this.salary = salary;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
 }
 
