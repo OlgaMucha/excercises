@@ -7,10 +7,26 @@ public class Member {
     private Role roleEnum;
     private double salary;
 
-    public Member(String firstName, String lastName, Role roleEnum, double salary) {
+    public Member() {
+    }
+
+    public Role getRoleEnum() {
+        return roleEnum;
+    }
+
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public void setRoleEnum(Role roleEnum) {
         this.roleEnum = roleEnum;
+    }
+
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 }
