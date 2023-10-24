@@ -14,12 +14,12 @@ public enum Role {
         int random = (int)(Math.random() * (upper - lower)) + lower;
         Role theRole = null;
 
-        switch (random){
-            case 1: theRole = Role.Assistant;
-            case 2: theRole = Role.Associate;
-            case 3: theRole = Role.Full;
-        }
-        return theRole;
+        return switch (random) {
+            case 1 -> Role.Assistant;
+            case 2 -> Role.Associate;
+            case 3 -> Role.Full;
+            default -> theRole;
+        };
     }
 
 }

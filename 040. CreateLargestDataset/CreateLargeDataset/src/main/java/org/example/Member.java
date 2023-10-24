@@ -1,19 +1,17 @@
 package org.example;
 
-import java.util.ArrayList;
-
 public class Member {
 
-    private String FirstName;
-    private String LastName;
+    private String firstName;
+    private String lastName;
     private Role roleEnum;
-    private double Salary;
+    private double salary;
 
     public Member(String firstName, String lastName, Role roleEnum, double salary) {
-        FirstName = firstName;
-        LastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.roleEnum = roleEnum;
-        Salary = salary;
+        this.salary = salary;
     }
 }
 
