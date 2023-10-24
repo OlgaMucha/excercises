@@ -11,9 +11,10 @@ public enum Role {
 
         int lower = 1;
         int upper = 3;
-        int random = (int)(Math.random() * (upper - lower)) + lower;
-        Role theRole = null;
+        //int random = (int)(Math.random() * (upper - lower)) + lower;
+        int random = lower + (int)(Math.random() * ((upper - lower) + 1));
 
+        Role theRole = null;
         return switch (random) {
             case 1 -> Role.Assistant;
             case 2 -> Role.Associate;
