@@ -17,6 +17,5 @@ class RoleTest {
         Role[] expectedRandomRolesRoles = {Role.Associate,Role.Assistant, Role.Full};
         List<Role> expectedRandomRolesRolesList = Arrays.asList(expectedRandomRolesRoles);
         Assertions.assertTrue(expectedRandomRolesRolesList.contains((theRole)));
-
     }
 }

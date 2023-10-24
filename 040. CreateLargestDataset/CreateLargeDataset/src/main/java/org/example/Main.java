@@ -24,7 +24,6 @@ public class Main {
 
             members.add(member);
         }
-        System.out.println("lala");
     }
 
     private static double calculateSalaryPerRole(Role roleEnum) {
