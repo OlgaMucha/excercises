@@ -18,17 +18,19 @@ public class Main {
         java.io.File file = new File("dataset.txt");
         try {
             java.io.PrintWriter printWriter = new java.io.PrintWriter(file);
-
+            ArrayList<Member> members = new ArrayList<>();
 
             for (int i = 0; i < 1000; i++) {
 
                 Member member = new Member();
-                member.setFirstName("Firstname" + (i + 1));
-                member.setLastName("Lastname" + (i + 1));
+                member.setFirstName("FirstName" + (i + 1));
+                member.setLastName("LastName" + (i + 1));
                 member.setRoleEnum(Role.enumMethod());
                 member.setSalary(calculateSalaryPerRole(member.getRoleEnum()));
-                printWriter.println(member.getFirstName() + " " + member.getLastName() + " " + member.getRoleEnum() + " " + member.getSalary());
+                members.add(member);
+                printWriter.printf("%-14s %-14s %-10s %10.2f \n", member.getFirstName(), member.getLastName(), member.getRoleEnum(), member.getSalary());
             }
+            printWriter.close();
 
         } catch (FileNotFoundException err) {
             System.out.println(err.getMessage());
