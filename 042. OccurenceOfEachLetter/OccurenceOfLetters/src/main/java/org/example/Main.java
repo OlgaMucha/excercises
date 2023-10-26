@@ -2,10 +2,7 @@ package org.example;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -21,15 +18,22 @@ public class Main {
         Scanner fileReader = new Scanner(file);
         ArrayList<String> arrayList = new ArrayList<>();
 
-        while(fileReader.hasNext()){
+        while (fileReader.hasNext()) {
             String[] arrayLetters = fileReader.nextLine().split("");
             List<String> listLetters = Arrays.asList(arrayLetters);
             arrayList.addAll(listLetters);
             fileReader.nextLine();
-            }
+        }
         System.out.println(arrayList.toString());
 
+        //all letters to lower case
+        arrayList.replaceAll(String::toLowerCase);
+        System.out.println(arrayList.toString());
 
-        }
-        }
+        //sort array list ascending
+        arrayList.sort(null);
+        System.out.println(arrayList.toString());
+
+    }
+}
 
