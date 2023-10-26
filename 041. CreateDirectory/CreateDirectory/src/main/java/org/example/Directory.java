@@ -10,9 +10,6 @@ public class Directory {
         this.path = path;
     }
 
-    public Directory() {
-    }
-
     public boolean createDirectory(){
         File file = new File(this.path);
 

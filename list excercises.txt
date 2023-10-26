@@ -123,3 +123,18 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 		FirstName2 LastName2 associate 81112.45
 		. . .
 		FirstName1000 LastName1000 full 92255.21
+
+041. (Create a directory) Write a program that prompts the user to enter a directory
+	name and creates a directory using the File’s mkdirs method. The program
+	displays the message “Directory created successfully” if a directory is created
+	or “Directory already exists” if the directory already exists.
+
+
+042. (Occurrences of each letter) Write a program that prompts the user to enter a
+	file name and displays the occurrences of each letter in the file. Letters are case
+	insensitive. Here is a sample run:
+	Enter a filename: Lincoln.txt
+	Number of As: 56
+	Number of Bs: 134
+	...
+	Number of Zs: 9
