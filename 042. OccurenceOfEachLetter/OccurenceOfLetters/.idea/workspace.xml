@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81dd4376-20ff-44d3-8de8-65e1adf53769" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/src/main/java/org/example/Directory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/src/test/java/org/example/DirectoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/target/classes/org/example/Directory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../041. CreateDirectory/CreateDirectory/target/test-classes/org/example/DirectoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/description.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XJSf30U5dGjGOeRliLFshoN8xh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Olga excersises/042. OccurenceOfEachLetter"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Olga excersises\042. OccurenceOfEachLetter\OccurenceOfLetters" />
+      <recent name="D:\Olga excersises\042. OccurenceOfEachLetter\OccurenceOfLetters\src\main\java" />
+      <recent name="D:\Olga excersises\042. OccurenceOfEachLetter\OccurenceOfLetters\src\main\java\org\example" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81dd4376-20ff-44d3-8de8-65e1adf53769" name="Changes" comment="" />
+      <created>1698345791848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698345791848</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="arrayList.get(i + 1)" language="JAVA" />
+        <watch expression="arrayList.get(i)" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
