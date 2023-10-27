@@ -6,15 +6,13 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        //(Occurrences of each letter) Write a program that prompts the user to enter a
-        //	file name and displays the occurrences of each letter in the file. Letters are case
-        //	insensitive. Here is a sample run:
+
         System.out.println("Enter a file path");
         Scanner scanner = new Scanner(System.in);
         String path = scanner.nextLine();
         scanner.close();
 
-        java.io.File file = new File(path);
+        java.io.File file = new File("desc.txt");
         Scanner fileReader = new Scanner(file);
         ArrayList<String> arrayList = new ArrayList<>();
 
@@ -22,8 +20,12 @@ public class Main {
             String[] arrayLetters = fileReader.nextLine().split("");
             List<String> listLetters = Arrays.asList(arrayLetters);
             arrayList.addAll(listLetters);
+            if(!fileReader.hasNext()){
+                break;
+            }
             fileReader.nextLine();
         }
+        fileReader.close();
         System.out.println(arrayList.toString());
 
         //all letters to lower case
@@ -33,7 +35,28 @@ public class Main {
         //sort array list ascending
         arrayList.sort(null);
         System.out.println(arrayList.toString());
+        int k = 1;
+        HashMap<String,Integer> set = new HashMap<>();
+        for (int i = 0; i < arrayList.size(); i++) {
+            k = 1;
+            if(i == arrayList.size() - 1){
+                set.putIfAbsent(arrayList.get(arrayList.size() - 1), k);
+                break;
+            }
+            while (Objects.equals(arrayList.get(i), arrayList.get(i + 1))) {
+                k = k + 1;
+                if(i == arrayList.size() - 2){
+                    break;
+                }
+                i = i + 1;
+            }
+            set.putIfAbsent(arrayList.get(i), k);
 
+        }
+        set.forEach((a,b) -> System.out.println("Number of " + a.toUpperCase() + "s is " + b));
     }
-}
+        }
+
+
+
 
