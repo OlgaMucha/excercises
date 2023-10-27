@@ -17,24 +17,31 @@ public class Main {
         ArrayList<String> arrayList = new ArrayList<>();
 
         while (fileReader.hasNext()) {
+
             String[] arrayLetters = fileReader.nextLine().split("");
             List<String> listLetters = Arrays.asList(arrayLetters);
+
+            //remove non-letters frm array list
             arrayList.addAll(listLetters);
+            for(String letter:arrayLetters){
+                if(letter.matches("[^a-zA-Z]")){
+                    arrayList.remove(letter);
+                }
+            }
+
             if(!fileReader.hasNext()){
                 break;
             }
             fileReader.nextLine();
         }
         fileReader.close();
-        System.out.println(arrayList.toString());
 
         //all letters to lower case
         arrayList.replaceAll(String::toLowerCase);
-        System.out.println(arrayList.toString());
 
         //sort array list ascending
         arrayList.sort(null);
-        System.out.println(arrayList.toString());
+
         int k = 1;
         HashMap<String,Integer> set = new HashMap<>();
         for (int i = 0; i < arrayList.size(); i++) {
