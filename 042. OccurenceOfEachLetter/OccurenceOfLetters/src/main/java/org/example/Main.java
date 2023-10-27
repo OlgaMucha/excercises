@@ -12,7 +12,7 @@ public class Main {
         String path = scanner.nextLine();
         scanner.close();
 
-        java.io.File file = new File("desc.txt");
+        java.io.File file = new File(path);
         Scanner fileReader = new Scanner(file);
         ArrayList<String> arrayList = new ArrayList<>();
 
