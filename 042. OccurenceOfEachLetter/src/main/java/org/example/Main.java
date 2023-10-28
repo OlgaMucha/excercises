@@ -7,27 +7,50 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        String path = getFilePathFromUser();
+
+        java.io.File file = new File(path);
+        Scanner fileReader = new Scanner(file);
+
+
+        ArrayList<String> arrayListCharacters = readCharactersFromFileToArrayList(fileReader, arrayList);
+
+        ArrayList<String> arrayListCharactersSortedLowerCase = sortAndLowerCaseArrayList(arrayListCharacters);
+
+        HashMap<String, Integer> map = countNumberOccurrencesOfCharacterInArrayList(arrayListCharactersSortedLowerCase);
+
+        printOutput(map);
+    }
+
+    private static String getFilePathFromUser() {
         System.out.println("Enter a file path");
         Scanner scanner = new Scanner(System.in);
         String path = scanner.nextLine();
         scanner.close();
+        return path;
+    }
 
-        java.io.File file = new File(path);
-        Scanner fileReader = new Scanner(file);
-        ArrayList<String> arrayList = new ArrayList<>();
+    private static ArrayList<String> sortAndLowerCaseArrayList(ArrayList<String> arrayListCharacters) {
+        //all letters to lower case
+        arrayListCharacters.replaceAll(String::toLowerCase);
 
+        //sort array list ascending
+        arrayListCharacters.sort(null);
+        return arrayListCharacters;
+    }
+
+    private static ArrayList<String> readCharactersFromFileToArrayList(Scanner fileReader, ArrayList<String> arrayList) {
         while (fileReader.hasNext()) {
 
             String[] arrayLetters = fileReader.nextLine().split("");
             List<String> listLetters = Arrays.asList(arrayLetters);
 
-            //remove non-letters frm array list
             arrayList.addAll(listLetters);
-            for(String letter:arrayLetters){
-                if(letter.matches("[^a-zA-Z]")){
-                    arrayList.remove(letter);
-                }
-            }
+
+            //remove non-letters frm array list
+            removeNonCharactersFromArrayList(arrayList, arrayLetters);
 
             if(!fileReader.hasNext()){
                 break;
@@ -35,13 +58,10 @@ public class Main {
             fileReader.nextLine();
         }
         fileReader.close();
+        return arrayList;
+    }
 
-        //all letters to lower case
-        arrayList.replaceAll(String::toLowerCase);
-
-        //sort array list ascending
-        arrayList.sort(null);
-
+    private static HashMap<String, Integer> countNumberOccurrencesOfCharacterInArrayList(ArrayList<String> arrayList) {
         int k = 1;
         HashMap<String,Integer> set = new HashMap<>();
         for (int i = 0; i < arrayList.size(); i++) {
@@ -58,11 +78,26 @@ public class Main {
                 i = i + 1;
             }
             set.putIfAbsent(arrayList.get(i), k);
+        }
 
-        }
-        set.forEach((a,b) -> System.out.println("Number of " + a.toUpperCase() + "s is " + b));
+        return set;
     }
+    public static void printOutput(HashMap<String, Integer> map){
+        map.forEach((a,b) -> System.out.println("Number of " + a.toUpperCase() + "s is " + b));
+
+    }
+
+
+
+    private static void removeNonCharactersFromArrayList(ArrayList<String> arrayList, String[] arrayLetters) {
+
+        for(String letter: arrayLetters){
+            if(letter.matches("[^a-zA-Z]")){
+                arrayList.remove(letter);
+            }
         }
+    }
+}
 
 
 
