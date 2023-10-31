@@ -8,7 +8,8 @@ public class TextFile {
 
     private String path;
 
-    public TextFile(String path) {
+    public TextFile(String path)
+    {
         this.path = path;
     }
 
@@ -49,8 +50,13 @@ public class TextFile {
         ArrayList<String> arrayList = new ArrayList<>();
         java.io.File file = new File(path);
         Scanner fileReader = new Scanner(file);
-        while (fileReader.hasNext()) {
 
+
+
+
+
+        while (fileReader.hasNext()) {
+            //||fileReader.nextLine()==null"
             String[] arrayLetters = fileReader.nextLine().split("");
             List<String> listLetters = Arrays.asList(arrayLetters);
 

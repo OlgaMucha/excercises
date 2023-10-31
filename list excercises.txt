@@ -138,3 +138,7 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	Number of Bs: 134
 	...
 	Number of Zs: 9
+
+043. (Shuffle ArrayList) Write the following method that shuffles an ArrayList of
+	numbers:
+	public static void shuffle(ArrayList<Number> list)
