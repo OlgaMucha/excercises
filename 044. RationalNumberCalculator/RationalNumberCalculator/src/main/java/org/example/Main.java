@@ -16,13 +16,17 @@ public class Main {
         System.out.println(output(rationalNumber,secondNumber, resultMultiplication,'*'));
         System.out.println(output(rationalNumber,secondNumber, resultDivision,'/'));
     }
+    public static String outputRationalNumber(RationalNumber rationalNumber){
+        return rationalNumber.getNumerator() + "/" + rationalNumber.getDenominator();
+    }
+
 
     public static String output(RationalNumber rationalNumberFirst, RationalNumber rationalNumberSecond, RationalNumber rationalNumberResult, char sign){
-        return rationalNumberFirst.getNumerator() + "/" + rationalNumberFirst.getDenominator() +
+        return outputRationalNumber(rationalNumberFirst) +
                 sign +
-                rationalNumberSecond.getNumerator() + "/" + rationalNumberSecond.getDenominator() +
+                outputRationalNumber(rationalNumberSecond) +
                 " = " +
-                rationalNumberResult.getNumerator() + "/" + rationalNumberResult.getDenominator();
+                outputRationalNumber(rationalNumberResult);
 
     }
 }
