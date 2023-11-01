@@ -26,7 +26,7 @@ public class RationalNumber {
         return new RationalNumber(newNominator, newDenominator);
     }
 
-    public RationalNumber substractRationals(RationalNumber secondNumber){
+    public RationalNumber subtractRationals(RationalNumber secondNumber){
         int newDenominator = this.denominator * secondNumber.denominator;
         int newNominator = this.numerator * secondNumber.denominator - secondNumber.numerator * this.denominator;
         return new RationalNumber(newNominator, newDenominator);
@@ -35,6 +35,15 @@ public class RationalNumber {
     public RationalNumber multiplyRationals(RationalNumber secondNumber){
         int newDenominator = this.denominator * secondNumber.denominator;
         int newNominator = this.numerator *  secondNumber.numerator;
+        return new RationalNumber(newNominator, newDenominator);
+    }
+
+    public RationalNumber divideRationals(RationalNumber secondNumber){
+        if(secondNumber.numerator == 0){
+            throw new IllegalArgumentException("can't divide by zero!");
+        }
+        int newDenominator = this.denominator * secondNumber.numerator;
+        int newNominator = this.numerator *  secondNumber.denominator;
         return new RationalNumber(newNominator, newDenominator);
     }
 }
