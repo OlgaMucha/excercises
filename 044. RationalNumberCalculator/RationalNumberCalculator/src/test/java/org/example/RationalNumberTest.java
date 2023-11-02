@@ -34,27 +34,32 @@ class RationalNumberTest {
     @Test
     public void addRationals_testForCorrectResultAddTwoPositiveRationals() {
         //given
-        RationalNumber rationalNumber1 = new RationalNumber(1,2);
+        RationalNumber cut = new RationalNumber(1,2);
+
         RationalNumber rationalNumber2 = new RationalNumber(2,3);
         RationalNumber rationalNumber3 = new RationalNumber(1,4);
         RationalNumber rationalNumber4 = new RationalNumber(2,5);
         RationalNumber rationalNumber5 = new RationalNumber(20,50);
         RationalNumber rationalNumber6 = new RationalNumber(100,233);
+        RationalNumber rationalNumber7 = new RationalNumber(-1,2);
+        RationalNumber rationalNumber8 = new RationalNumber(-1,3);
+        RationalNumber rationalNumber9 = new RationalNumber(-1,-3);
         //when
-        RationalNumber actual1 = rationalNumber1.addRationals(rationalNumber2);
+        RationalNumber actual1 = cut.addRationals(rationalNumber2);
         RationalNumber expected1 = new RationalNumber(7,6);
 
-        RationalNumber actual2 = rationalNumber1.addRationals(rationalNumber3);
+        RationalNumber actual2 = cut.addRationals(rationalNumber3);
         RationalNumber expected2 = new RationalNumber(6,8);
 
-        RationalNumber actual3 = rationalNumber1.addRationals(rationalNumber4);
+        RationalNumber actual3 = cut.addRationals(rationalNumber4);
         RationalNumber expected3 = new RationalNumber(9,10);
 
-        RationalNumber actual4 = rationalNumber1.addRationals(rationalNumber5);
+        RationalNumber actual4 = cut.addRationals(rationalNumber5);
         RationalNumber expected4 = new RationalNumber(90,100);
 
-        RationalNumber actual5 = rationalNumber1.addRationals(rationalNumber6);
+        RationalNumber actual5 = cut.addRationals(rationalNumber6);
         RationalNumber expected5 = new RationalNumber(433,466);
+
         //then
         Assertions.assertAll("Test addition",
         ()->assertEquals(expected1,actual1),
@@ -62,6 +67,32 @@ class RationalNumberTest {
         ()->assertEquals(expected3,actual3),
         ()->assertEquals(expected4,actual4),
         ()->assertEquals(expected5,actual5)
+        );
+    }
+
+    @Test
+    public void addRationals_testForCorrectResultAddWithZeroRational() {
+        //given
+        RationalNumber cut = new RationalNumber(0,2);
+
+        RationalNumber rationalNumber2 = new RationalNumber(0,3);
+        RationalNumber rationalNumber3 = new RationalNumber(0,2);
+        RationalNumber rationalNumber4 = new RationalNumber(0,-2);
+
+        RationalNumber actual1 = cut.addRationals(rationalNumber2);
+        RationalNumber expected1 = new RationalNumber(0,6);
+
+        RationalNumber actual2 = cut.addRationals(rationalNumber3);
+        RationalNumber expected2 = new RationalNumber(0,4);
+
+        RationalNumber actual3 = cut.addRationals(rationalNumber4);
+        RationalNumber expected3 = new RationalNumber(0,-4);
+
+        //then
+        Assertions.assertAll("Test addition",
+                ()->assertEquals(expected1,actual1),
+                ()->assertEquals(expected2,actual2),
+                ()->assertEquals(expected3,actual3)
         );
     }
 }
