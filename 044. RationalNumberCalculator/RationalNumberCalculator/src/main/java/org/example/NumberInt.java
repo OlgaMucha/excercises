@@ -26,7 +26,10 @@ public class NumberInt {
         ArrayList<Integer> divisorsSecondNumber = secondNumber.findDivisors();
         ArrayList<Integer> commonElements = findCommonFieldsTwoArrayLists(divisorsFirstNumber,divisorsSecondNumber);
         for(int i:commonElements){
-            multiplicationResult = multiplicationResult*i;
+            boolean isPrime = isPrimeNumber(i);
+            if(isPrime) {
+                multiplicationResult = multiplicationResult * i;
+            }
         }
         return multiplicationResult;
     }
@@ -41,6 +44,12 @@ public class NumberInt {
             }
         }
         return commonElements;
+    }
+
+    private boolean isPrimeNumber(int nr){
+        NumberInt numberInt = new NumberInt(nr);
+        ArrayList<Integer> divisors = numberInt.findDivisors();
+        return divisors.size() <= 2;
     }
 
 
