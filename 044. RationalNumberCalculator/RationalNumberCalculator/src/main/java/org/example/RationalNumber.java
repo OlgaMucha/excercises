@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class RationalNumber {
     private int numerator;
     private int denominator;
@@ -10,6 +12,19 @@ public class RationalNumber {
             throw new IllegalArgumentException("Denominator can't be zero!");
         }
         this.denominator = denominator;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RationalNumber that = (RationalNumber) o;
+        return numerator == that.numerator && denominator == that.denominator;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
     }
 
     public int getNumerator() {
@@ -46,4 +61,6 @@ public class RationalNumber {
         int newNominator = this.numerator *  secondNumber.denominator;
         return new RationalNumber(newNominator, newDenominator);
     }
+
+
 }
