@@ -33,9 +33,5 @@ public class Main {
                 outputRationalNumber(rationalNumberSecond.simplifyRationalNumber()) +
                 " = " +
                 outputRationalNumber(rationalNumberResult.simplifyRationalNumber());
-
     }
-
-
-
 }
