@@ -10,6 +10,10 @@ public class NumberInt {
         this.numberValue = numberValue;
     }
 
+    public int getNumberValue() {
+        return numberValue;
+    }
+
     public ArrayList<Integer> findDivisors() {
         ArrayList<Integer> divisors = new ArrayList<>();
         for (int i = 1; i <= numberValue; i++)

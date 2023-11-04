@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        RationalNumber rationalNumber = new RationalNumber(1, 5);
+        RationalNumber rationalNumber = new RationalNumber(50, 75);
         RationalNumber secondNumber = new RationalNumber(2, 3);
 
         RationalNumber resultAddition = rationalNumber.addRationals(secondNumber);
@@ -13,15 +13,13 @@ public class Main {
         RationalNumber resultMultiplication = rationalNumber.multiplyRationals(secondNumber);
         RationalNumber resultDivision = rationalNumber.divideRationals(secondNumber);
 
-//        System.out.println(output(rationalNumber,secondNumber, resultAddition,'+'));
-//        System.out.println(output(rationalNumber,secondNumber, resultSubtraction,'-'));
-//        System.out.println(output(rationalNumber,secondNumber, resultMultiplication,'*'));
-//        System.out.println(output(rationalNumber,secondNumber, resultDivision,'/'));
 
         RationalNumber number = new RationalNumber(2,6);
         NumberInt numberInt1 = new NumberInt(100);
         NumberInt numberInt2 = new NumberInt(12);
-        ;
+
+        System.out.println(rationalNumber.simplifyRationalNumber().getNumerator() + "/" + rationalNumber.simplifyRationalNumber().getDenominator());
+
         System.out.println(numberInt1.greatestCommonDivisor(numberInt2));
     }
     public static String outputRationalNumber(RationalNumber rationalNumber){
@@ -30,11 +28,11 @@ public class Main {
 
 
     public static String output(RationalNumber rationalNumberFirst, RationalNumber rationalNumberSecond, RationalNumber rationalNumberResult, char sign){
-        return outputRationalNumber(rationalNumberFirst) +
+        return outputRationalNumber(rationalNumberFirst.simplifyRationalNumber()) +
                 sign +
-                outputRationalNumber(rationalNumberSecond) +
+                outputRationalNumber(rationalNumberSecond.simplifyRationalNumber()) +
                 " = " +
-                outputRationalNumber(rationalNumberResult);
+                outputRationalNumber(rationalNumberResult.simplifyRationalNumber());
 
     }
 

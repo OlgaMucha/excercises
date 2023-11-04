@@ -63,13 +63,15 @@ public class RationalNumber {
     }
 
     public RationalNumber simplifyRationalNumber(){
-        NumberInt numerator = new NumberInt(this.denominator);
+        NumberInt numerator = new NumberInt(this.numerator);
+
         NumberInt denominator = new NumberInt(this.denominator);
+
         int greatestCommonDivisor = numerator.greatestCommonDivisor(denominator);
         if(greatestCommonDivisor == 1){
             System.out.println("The rational number can't be simplified");
         } else {
-            System.out.println(this.numerator + "/" + this.denominator + " simplifies to " + this.numerator / greatestCommonDivisor + "/" + this.denominator / greatestCommonDivisor);
+            System.out.println(this.numerator + "/" + this.denominator + " simplifies to " + this.numerator/ greatestCommonDivisor + "/" + this.denominator / greatestCommonDivisor);
         }
         return new RationalNumber(this.numerator/greatestCommonDivisor, this.denominator/greatestCommonDivisor);
     }
