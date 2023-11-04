@@ -20,18 +20,25 @@ public class NumberInt {
     }
 
     public int greatestCommonDivisor(NumberInt secondNumber){
-        int multiplicationResult = 1;
+        int commonDivisor = 0;
         NumberInt firstNumber = new NumberInt(numberValue);
         ArrayList<Integer> divisorsFirstNumber = firstNumber.findDivisors();
         ArrayList<Integer> divisorsSecondNumber = secondNumber.findDivisors();
         ArrayList<Integer> commonElements = findCommonFieldsTwoArrayLists(divisorsFirstNumber,divisorsSecondNumber);
         for(int i:commonElements){
-            boolean isPrime = isPrimeNumber(i);
-            if(isPrime) {
-                multiplicationResult = multiplicationResult * i;
+            if(i <= Math.min(firstNumber.numberValue, secondNumber.numberValue)) {
+                commonDivisor = i;
             }
         }
-        return multiplicationResult;
+
+
+//        for(i = 1; i <= a || i <= b; i++) {
+//            if( a%i == 0 && b%i == 0 )
+//                hcf = i;
+//        }
+//        System.out.println("HCF of given two numbers is ::"+hcf);
+    //}
+        return commonDivisor;
     }
 
     private ArrayList<Integer> findCommonFieldsTwoArrayLists(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2){

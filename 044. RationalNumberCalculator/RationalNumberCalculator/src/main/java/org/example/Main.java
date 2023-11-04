@@ -13,21 +13,16 @@ public class Main {
         RationalNumber resultMultiplication = rationalNumber.multiplyRationals(secondNumber);
         RationalNumber resultDivision = rationalNumber.divideRationals(secondNumber);
 
-        System.out.println(output(rationalNumber,secondNumber, resultAddition,'+'));
-        System.out.println(output(rationalNumber,secondNumber, resultSubtraction,'-'));
-        System.out.println(output(rationalNumber,secondNumber, resultMultiplication,'*'));
-        System.out.println(output(rationalNumber,secondNumber, resultDivision,'/'));
+//        System.out.println(output(rationalNumber,secondNumber, resultAddition,'+'));
+//        System.out.println(output(rationalNumber,secondNumber, resultSubtraction,'-'));
+//        System.out.println(output(rationalNumber,secondNumber, resultMultiplication,'*'));
+//        System.out.println(output(rationalNumber,secondNumber, resultDivision,'/'));
 
-        NumberInt nr = new NumberInt(20);
-        ArrayList<Integer> divisors = nr.findDivisors();
-        System.out.println("Number 1 divisors " + divisors.toString());
-
-        NumberInt nr2 = new NumberInt(30);
-        ArrayList<Integer> divisors2 = nr2.findDivisors();
-        System.out.println("Number 2 divisors " + divisors2.toString());
-
-        int greatestCommonDivisor = nr.greatestCommonDivisor(nr2);
-        System.out.println(greatestCommonDivisor);
+        RationalNumber number = new RationalNumber(2,6);
+        NumberInt numberInt1 = new NumberInt(100);
+        NumberInt numberInt2 = new NumberInt(12);
+        ;
+        System.out.println(numberInt1.greatestCommonDivisor(numberInt2));
     }
     public static String outputRationalNumber(RationalNumber rationalNumber){
         return rationalNumber.getNumerator() + "/" + rationalNumber.getDenominator();
