@@ -330,14 +330,14 @@ class RationalNumberTest {
         RationalNumber expected3 = rationalNumber3.simplifyRationalNumber();
 
         RationalNumber rationalNumber4 = new RationalNumber(7,90);
-        RationalNumber expected4  = rationalNumber3.simplifyRationalNumber();
+        RationalNumber expected4  = rationalNumber4.simplifyRationalNumber();
 
         //then
-        Assertions.assertAll("Test simplify rational number that can be simplified",
+        Assertions.assertAll("Test simplify rational number that can' t be simplified",
                 ()-> assertEquals(expected1, rationalNumber1),
                 ()-> assertEquals(expected2, rationalNumber2),
                 ()-> assertEquals(expected3, rationalNumber3),
-                ()-> assertEquals(expected3, rationalNumber3)
+                ()-> assertEquals(expected4, rationalNumber4)
 
         );
 
