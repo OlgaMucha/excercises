@@ -384,12 +384,15 @@ class RationalNumberTest {
         //Test2
         RationalNumber rationalNumber3 = new RationalNumber(5,15);
         RationalNumber rationalNumber4 = new RationalNumber(1,3);
+
+        RationalNumber rationalNumber5 = new RationalNumber(-5,-15);
+        RationalNumber rationalNumber6 = new RationalNumber(1,3);
         //when
         //Test1
-        Assertions.assertAll("Test simplify rational number that can be simplified",
+        Assertions.assertAll("Test rational numbers are equal and equal to simplified rational number",
                 ()-> assertEquals(rationalNumber1, rationalNumber2),
-                ()-> assertEquals(rationalNumber3, rationalNumber4)
-
+                ()-> assertEquals(rationalNumber3, rationalNumber4),
+                ()-> assertEquals(rationalNumber5, rationalNumber6)
         );
 
 
