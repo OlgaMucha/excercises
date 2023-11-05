@@ -375,6 +375,25 @@ class RationalNumberTest {
         );
 
     }
+    @Test
+    public void test_equals_check(){
+        //given
+        //Test1
+        RationalNumber rationalNumber1 = new RationalNumber(1,2);
+        RationalNumber rationalNumber2 = new RationalNumber(1,2);
+        //Test2
+        RationalNumber rationalNumber3 = new RationalNumber(5,15);
+        RationalNumber rationalNumber4 = new RationalNumber(1,3);
+        //when
+        //Test1
+        Assertions.assertAll("Test simplify rational number that can be simplified",
+                ()-> assertEquals(rationalNumber1, rationalNumber2),
+                ()-> assertEquals(rationalNumber3, rationalNumber4)
+
+        );
+
+
+    }
 
 
 

@@ -20,7 +20,10 @@ public class RationalNumber {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RationalNumber that = (RationalNumber) o;
-        return numerator == that.numerator && denominator == that.denominator;
+        RationalNumber second = (RationalNumber) o;
+        return (numerator == that.numerator && denominator == that.denominator) ||
+                (second.getNumerator() == this.simplifyRationalNumber().getNumerator() &&
+                 second.getDenominator() == this.simplifyRationalNumber().getDenominator());
     }
 
     @Override
