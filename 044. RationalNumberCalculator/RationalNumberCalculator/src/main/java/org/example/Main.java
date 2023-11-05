@@ -14,11 +14,13 @@ public class Main {
         RationalNumber resultDivision = rationalNumber.divideRationals(secondNumber);
 
 
-        RationalNumber number = new RationalNumber(2,6);
-        NumberInt numberInt1 = new NumberInt(100);
-        NumberInt numberInt2 = new NumberInt(12);
+        RationalNumber number = new RationalNumber(-2,6);
+        NumberInt numberInt1 = new NumberInt(-2);
+        NumberInt numberInt2 = new NumberInt(6);
 
-        System.out.println(rationalNumber.simplifyRationalNumber().getNumerator() + "/" + rationalNumber.simplifyRationalNumber().getDenominator());
+        System.out.println(numberInt1.findDivisors().toString());
+
+
 
         System.out.println(numberInt1.greatestCommonDivisor(numberInt2));
     }
@@ -34,4 +36,7 @@ public class Main {
                 " = " +
                 outputRationalNumber(rationalNumberResult.simplifyRationalNumber());
     }
+
+
+
 }

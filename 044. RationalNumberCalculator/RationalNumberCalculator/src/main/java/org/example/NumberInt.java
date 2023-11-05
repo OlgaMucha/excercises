@@ -15,6 +15,9 @@ public class NumberInt {
     }
 
     public ArrayList<Integer> findDivisors() {
+        if(numberValue < 0){
+            numberValue = -numberValue;
+        }
         ArrayList<Integer> divisors = new ArrayList<>();
         for (int i = 1; i <= numberValue; i++)
             if (numberValue % i == 0) {

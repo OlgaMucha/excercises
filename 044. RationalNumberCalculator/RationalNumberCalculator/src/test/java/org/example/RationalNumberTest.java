@@ -4,7 +4,7 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class RationalNumberTest {
 
@@ -287,5 +287,97 @@ class RationalNumberTest {
                 ()->assertEquals(expected3,actual3)
         );
     }
+
+    //TEST SIMPLIFY RATIONAL
+
+    @Test
+    public void test_simplifyRationalNumber_rationalNumberCanBeSimplified(){
+        RationalNumber rationalNumber1 = new RationalNumber(5,10);
+        RationalNumber expected1 = rationalNumber1.simplifyRationalNumber();
+        RationalNumber actual1 = new RationalNumber(1,2);
+
+        RationalNumber rationalNumber2 = new RationalNumber(5,20);
+        RationalNumber expected2 = rationalNumber2.simplifyRationalNumber();
+        RationalNumber actual2 = new RationalNumber(1,4);
+
+        RationalNumber rationalNumber3 = new RationalNumber(30,270);
+        RationalNumber expected3 = rationalNumber3.simplifyRationalNumber();
+        RationalNumber actual3 = new RationalNumber(1,9);
+
+        RationalNumber rationalNumber4 = new RationalNumber(15,90);
+        RationalNumber expected4  = rationalNumber3.simplifyRationalNumber();
+        RationalNumber actual4 = new RationalNumber(5,30);
+
+        //then
+        Assertions.assertAll("Test simplify rational number that can be simplified",
+                ()->assertEquals(expected1,actual1),
+                ()->assertEquals(expected2,actual2),
+                ()->assertEquals(expected3,actual3),
+                ()->assertEquals(expected3,actual3)
+        );
+
+    }
+
+    @Test
+    public void test_simplifyRationalNumber_rationalNumberCantBeSimplified(){
+        RationalNumber rationalNumber1 = new RationalNumber(1,10);
+        RationalNumber expected1 = rationalNumber1.simplifyRationalNumber();
+
+        RationalNumber rationalNumber2 = new RationalNumber(3,20);
+        RationalNumber expected2 = rationalNumber2.simplifyRationalNumber();
+
+        RationalNumber rationalNumber3 = new RationalNumber(13,270);
+        RationalNumber expected3 = rationalNumber3.simplifyRationalNumber();
+
+        RationalNumber rationalNumber4 = new RationalNumber(7,90);
+        RationalNumber expected4  = rationalNumber3.simplifyRationalNumber();
+
+        //then
+        Assertions.assertAll("Test simplify rational number that can be simplified",
+                ()-> assertEquals(expected1, rationalNumber1),
+                ()-> assertEquals(expected2, rationalNumber2),
+                ()-> assertEquals(expected3, rationalNumber3),
+                ()-> assertEquals(expected3, rationalNumber3)
+
+        );
+
+    }
+
+    @Test
+    public void test_simplifyRationalNumber_rationalNumberNumeratorEqualsZeroWillReturnZeroOverOne(){
+        RationalNumber rationalNumber1 = new RationalNumber(0,10);
+        RationalNumber expected1 = rationalNumber1.simplifyRationalNumber();
+        RationalNumber actual1 = new RationalNumber(0,1);
+
+        //then
+        Assertions.assertAll("Test simplify rational number that can be simplified",
+                ()-> assertEquals(expected1, actual1)
+                //()-> assertEquals(expected2, rationalNumber2)
+
+        );
+
+    }
+
+    @Test
+    public void test_simplifyRationalNumber_rationalNumberNumeratorOrDenominatorIsNegative(){
+        //given
+        RationalNumber rationalNumber1 = new RationalNumber(-2,4);
+        RationalNumber rationalNumber2 = new RationalNumber(-2,-4);
+        //when
+        RationalNumber expected1 = rationalNumber1.simplifyRationalNumber();
+        RationalNumber expected2 = rationalNumber2.simplifyRationalNumber();
+        //then
+        RationalNumber actual1 = new RationalNumber(-1,2);
+        RationalNumber actual2 = new RationalNumber(1,2);
+
+        Assertions.assertAll("Test simplify rational number that can be simplified",
+                ()-> assertEquals(expected1, actual1),
+                ()-> assertEquals(expected2, actual2)
+
+        );
+
+    }
+
+
 
 }

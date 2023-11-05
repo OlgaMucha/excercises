@@ -3,6 +3,7 @@ package org.example;
 import java.util.Objects;
 
 public class RationalNumber {
+    public static final int SIMPLIFIED_DENOMINATOR_WHEN_NUMERATOR_ZERO = 1;
     private int numerator;
     private int denominator;
 
@@ -62,18 +63,22 @@ public class RationalNumber {
         return new RationalNumber(newNominator, newDenominator);
     }
 
-    public RationalNumber simplifyRationalNumber(){
+    public RationalNumber simplifyRationalNumber() {
         NumberInt numerator = new NumberInt(this.numerator);
-
         NumberInt denominator = new NumberInt(this.denominator);
+        if (numerator.getNumberValue() == 0) {
+            return new RationalNumber(this.numerator, SIMPLIFIED_DENOMINATOR_WHEN_NUMERATOR_ZERO);
+        }
 
         int greatestCommonDivisor = numerator.greatestCommonDivisor(denominator);
-        if(greatestCommonDivisor == 1){
-            System.out.println("The rational number can't be simplified");
-        } else {
-            System.out.println(this.numerator + "/" + this.denominator + " simplifies to " + this.numerator/ greatestCommonDivisor + "/" + this.denominator / greatestCommonDivisor);
+        int newNumerator = this.numerator / greatestCommonDivisor;
+        int newDenominator = this.denominator / greatestCommonDivisor;
+        if (this.numerator < 0 && this.denominator < 0) {
+            newNumerator = (-1) * newNumerator;
+            newDenominator = (-1) * newDenominator;
         }
-        return new RationalNumber(this.numerator/greatestCommonDivisor, this.denominator/greatestCommonDivisor);
+        System.out.println(this.numerator + "/" + this.denominator + " simplifies to " + newNumerator + "/" + newDenominator);
+        return new RationalNumber(newNumerator, newDenominator);
     }
 
 
