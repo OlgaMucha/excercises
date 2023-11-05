@@ -14,6 +14,11 @@ public class ArrayListInt {
         return arrayList;
     }
 
+    /**
+     * Method: findCommonFieldsTwoArrayLists
+     * finds common elements of two array lists and returns it in the form of an array list.
+     * @return ArrayList<Integer>
+     */
     public ArrayList<Integer> findCommonFieldsTwoArrayLists(ArrayListInt arrayList2){
         ArrayList<Integer> commonElements = new ArrayList<>();
 

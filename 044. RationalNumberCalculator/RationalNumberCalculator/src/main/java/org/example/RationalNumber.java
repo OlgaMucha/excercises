@@ -36,24 +36,45 @@ public class RationalNumber {
         return denominator;
     }
 
+    /**
+     * Method: addRationals
+     * Adds two rational numbers and returns result of addition.
+     * @return RationalNumber
+     */
+
     public RationalNumber addRationals(RationalNumber secondNumber){
         int newDenominator = this.denominator * secondNumber.denominator;
         int newNominator = this.numerator * secondNumber.denominator + secondNumber.numerator * this.denominator;
         return new RationalNumber(newNominator, newDenominator);
     }
 
+    /**
+     * Method: subtractRationals
+     * Subtracts two rational numbers and returns result of subtraction.
+     * @return RationalNumber
+     */
     public RationalNumber subtractRationals(RationalNumber secondNumber){
         int newDenominator = this.denominator * secondNumber.denominator;
         int newNominator = this.numerator * secondNumber.denominator - secondNumber.numerator * this.denominator;
         return new RationalNumber(newNominator, newDenominator);
     }
 
+    /**
+     * Method: multiply rationals
+     * Multiplies two rational numbers and returns result of multiplication.
+     * @return RationalNumber
+     */
     public RationalNumber multiplyRationals(RationalNumber secondNumber){
         int newDenominator = this.denominator * secondNumber.denominator;
         int newNominator = this.numerator *  secondNumber.numerator;
         return new RationalNumber(newNominator, newDenominator);
     }
 
+    /**
+     * Method: divide rational numbers
+     * divides two rational numbers, in case second rational number is 0 (its numerator is 0) throws exception
+     * @return RationalNumber
+     */
     public RationalNumber divideRationals(RationalNumber secondNumber){
         if(secondNumber.numerator == 0){
             throw new IllegalArgumentException("can't divide by zero!");
@@ -63,6 +84,13 @@ public class RationalNumber {
         return new RationalNumber(newNominator, newDenominator);
     }
 
+    /**
+     * Method: simplifyRationalNumber
+     * simplifies rational number by dividing numerator and denominator by greater common divisor.
+     * if numerator is 0, it simplifies it to 0/1.
+     * if both numerator and denominator are 0, it returns the positive result (ex -2/-4 = 1/2)
+     * @return RationalNumber - simplified number
+     */
     public RationalNumber simplifyRationalNumber() {
         NumberInt numerator = new NumberInt(this.numerator);
         NumberInt denominator = new NumberInt(this.denominator);
@@ -77,9 +105,6 @@ public class RationalNumber {
             newNumerator = (-1) * newNumerator;
             newDenominator = (-1) * newDenominator;
         }
-        System.out.println(this.numerator + "/" + this.denominator + " simplifies to " + newNumerator + "/" + newDenominator);
         return new RationalNumber(newNumerator, newDenominator);
     }
-
-
 }

@@ -1,42 +1,11 @@
 package org.example;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        RationalNumber rationalNumber = new RationalNumber(50, 75);
-        RationalNumber secondNumber = new RationalNumber(2, 3);
-
-        RationalNumber resultAddition = rationalNumber.addRationals(secondNumber);
-        RationalNumber resultSubtraction = rationalNumber.subtractRationals(secondNumber);
-        RationalNumber resultMultiplication = rationalNumber.multiplyRationals(secondNumber);
-        RationalNumber resultDivision = rationalNumber.divideRationals(secondNumber);
-
-
-        RationalNumber number = new RationalNumber(-2,6);
-        NumberInt numberInt1 = new NumberInt(-2);
-        NumberInt numberInt2 = new NumberInt(6);
-
-        System.out.println(numberInt1.findDivisors().toString());
-
-
-
-        System.out.println(numberInt1.greatestCommonDivisor(numberInt2));
+        Scanner scanner = new Scanner(System.in);
+        Calculator calculator = new Calculator(scanner);
+        calculator.setup();
     }
-    public static String outputRationalNumber(RationalNumber rationalNumber){
-        return rationalNumber.getNumerator() + "/" + rationalNumber.getDenominator();
-    }
-
-
-    public static String output(RationalNumber rationalNumberFirst, RationalNumber rationalNumberSecond, RationalNumber rationalNumberResult, char sign){
-        return outputRationalNumber(rationalNumberFirst.simplifyRationalNumber()) +
-                sign +
-                outputRationalNumber(rationalNumberSecond.simplifyRationalNumber()) +
-                " = " +
-                outputRationalNumber(rationalNumberResult.simplifyRationalNumber());
-    }
-
-
-
 }

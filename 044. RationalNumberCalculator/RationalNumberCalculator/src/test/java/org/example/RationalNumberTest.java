@@ -352,8 +352,6 @@ class RationalNumberTest {
         //then
         Assertions.assertAll("Test simplify rational number that can be simplified",
                 ()-> assertEquals(expected1, actual1)
-                //()-> assertEquals(expected2, rationalNumber2)
-
         );
 
     }

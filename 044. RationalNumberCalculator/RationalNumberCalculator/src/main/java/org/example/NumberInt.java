@@ -14,6 +14,12 @@ public class NumberInt {
         return numberValue;
     }
 
+    /**
+     * Method: findDivisors
+     * it finds divisors of integer and returns then in an array list
+     * @return ArrayList<Integer>
+     *
+     */
     public ArrayList<Integer> findDivisors() {
         if(numberValue < 0){
             numberValue = -numberValue;
@@ -26,6 +32,11 @@ public class NumberInt {
         return divisors;
     }
 
+    /**
+     * Method: greatestCommonDivisor
+     * it returns the greatest common divisor of two numbers.
+     * @return int GCD
+     */
     public int greatestCommonDivisor(NumberInt secondNumber){
         int commonDivisor = 0;
         NumberInt firstNumber = new NumberInt(numberValue);
@@ -34,7 +45,6 @@ public class NumberInt {
 
         ArrayList<Integer> arrayDivisorsSecondNumber = secondNumber.findDivisors();
         ArrayListInt divisorsSecondNumber = new ArrayListInt(arrayDivisorsSecondNumber);
-
 
         ArrayList<Integer> commonElements = divisorsFirstNumber.findCommonFieldsTwoArrayLists(divisorsSecondNumber);
         for(int i:commonElements){
