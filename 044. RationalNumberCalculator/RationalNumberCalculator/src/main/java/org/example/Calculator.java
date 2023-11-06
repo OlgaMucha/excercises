@@ -135,4 +135,22 @@ public class Calculator {
         return new RationalNumber(numerator, denominator);
 
     }
+
+    public RationalNumber calculateTotalNConsecutiveRationals(int numerator, int n){
+
+        RationalNumber totalRational = new RationalNumber(0, 1);
+        RationalNumber consecutiveRational;
+        for (int i = numerator; i <= n; i++) {
+            consecutiveRational = getConsecutiveRational(i);
+            totalRational = totalRational.addRationals(consecutiveRational);
+        }
+
+        return totalRational;
+    }
+
+    private static RationalNumber getConsecutiveRational(int numerator) {
+        int denominator = numerator + 1;
+        return new RationalNumber(numerator, denominator);
+    }
 }
+

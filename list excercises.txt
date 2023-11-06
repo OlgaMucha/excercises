@@ -142,3 +142,6 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 043. (Shuffle ArrayList) Write the following method that shuffles an ArrayList of
 	numbers:
 	public static void shuffle(ArrayList<Number> list)
+044. (Create a rational-number calculator) Write a program similar to Listing 7.9,
+	Calculator.java. Instead of using integers, use rationals, create methods add, substract, multiply and divide. 
+	example: 1/2 + 3/5 = 11/10	
