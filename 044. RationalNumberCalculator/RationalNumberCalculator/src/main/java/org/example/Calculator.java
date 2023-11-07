@@ -137,14 +137,18 @@ public class Calculator {
     }
 
     public RationalNumber calculateTotalNConsecutiveRationals(int numerator, int n){
-
+        if(numerator > n){
+            throw new IllegalArgumentException("first value cant be greater then second value");
+        }
+        if(numerator < 0){
+            throw new IllegalArgumentException("first value must be greater or equal 0");
+        }
         RationalNumber totalRational = new RationalNumber(0, 1);
         RationalNumber consecutiveRational;
         for (int i = numerator; i <= n; i++) {
             consecutiveRational = getConsecutiveRational(i);
             totalRational = totalRational.addRationals(consecutiveRational);
         }
-
         return totalRational;
     }
 
