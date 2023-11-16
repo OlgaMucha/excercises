@@ -21,13 +21,21 @@ public class QuadraticEquation {
         double solution1;
         double solution2;
         double delta = calculateDeltaForEquation();
+        if(a == 0 && b == 0 && c == 0){
+            return 999;
+        }
+        if(a == 0){
+
+            solution1 = (double)-c / b;
+            return 1;
+        }
         if(delta > 0){
             realSolutions = 2;
             solution1 = (-b - Math.sqrt(delta)) / (2 * a);
             solution2 = (-b + Math.sqrt(delta)) / (2 * a);
         }else if(delta == 0){
             realSolutions = 1;
-            solution1 = -b / (2 * a);
+            solution1 = (double)-b / (2 * a);
         }else{
             realSolutions = 0;
         }
