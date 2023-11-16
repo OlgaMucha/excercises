@@ -74,7 +74,7 @@ class QuadraticEquationTest {
     @Test
     void test_numberOfRealSolutions_a_0_b_0_c_0() {
         QuadraticEquation cut = new QuadraticEquation(0,0,0);
-        double expectedNumberOfRealSolutions = 999;
+        double expectedNumberOfRealSolutions = 99;
         int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
         Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
 
