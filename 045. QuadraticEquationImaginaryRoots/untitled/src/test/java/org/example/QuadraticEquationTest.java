@@ -10,18 +10,16 @@ class QuadraticEquationTest {
 
     @Test
     void test_calculateDeltaForEquation_a_0_b_0_c_0() {
-        QuadraticEquation cut = new QuadraticEquation(0,0,0);
-        double expectedDelta = 0;
-        double actualDelta = cut.calculateDeltaForEquation();
-        Assertions.assertEquals(expectedDelta,actualDelta);
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            new QuadraticEquation(0,0,0);
+        });
     }
 
     @Test
     void test_calculateDeltaForEquation_a_0_b_0_c_1() {
-        QuadraticEquation cut = new QuadraticEquation(0,0,1);
-        double expectedDelta = 0;
-        double actualDelta = cut.calculateDeltaForEquation();
-        Assertions.assertEquals(expectedDelta,actualDelta);
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            new QuadraticEquation(0,0,1);
+        });
     }
 
     @Test
@@ -34,10 +32,9 @@ class QuadraticEquationTest {
 
     @Test
     void test_calculateDeltaForEquation_a_0_b_1_c_0() {
-        QuadraticEquation cut = new QuadraticEquation(0,1,0);
-        double expectedDelta = 1;
-        double actualDelta = cut.calculateDeltaForEquation();
-        Assertions.assertEquals(expectedDelta,actualDelta);
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            new QuadraticEquation(0,1,0);
+        });
     }
 
     @Test
@@ -74,49 +71,23 @@ class QuadraticEquationTest {
 
     @Test
     void test_numberOfRealSolutions_a_0_b_0_c_0() {
-        QuadraticEquation cut = new QuadraticEquation(0,0,0);
-        double expectedNumberOfRealSolutions = 99;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
-        Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
-
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            new QuadraticEquation(0,0,0);
+        });
     }
     @Test
     void test_numberOfRealSolutions_a_1_b_0_c_0() {
         QuadraticEquation cut = new QuadraticEquation(1,0,0);
         double expectedNumberOfRealSolutions = 1;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
-        Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
-    }
-
-    @Test
-    void test_numberOfRealSolutions_a_0_b_1_c_0() {
-        QuadraticEquation cut = new QuadraticEquation(0,1,0);
-        double expectedNumberOfRealSolutions = 1;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
-        Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
-    }
-
-    @Test
-    void test_numberOfRealSolutions_a_0_b_0_c_1() {
-        QuadraticEquation cut = new QuadraticEquation(0,0,1);
-        double expectedNumberOfRealSolutions = 1;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
-        Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
-    }
-
-    @Test
-    void test_numberOfRealSolutions_a_0_b_1_c_2() {
-        QuadraticEquation cut = new QuadraticEquation(0,1,2);
-        double expectedNumberOfRealSolutions = 1;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
+        int actualNumberOfRealSolutions = cut.numberOfSolutions();
         Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
     }
 
     @Test
     void test_numberOfRealSolutions_a_1_b_1_c_1() {
         QuadraticEquation cut = new QuadraticEquation(1,1,1);
-        double expectedNumberOfRealSolutions = 0;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
+        double expectedNumberOfRealSolutions = 2;
+        int actualNumberOfRealSolutions = cut.numberOfSolutions();
         Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
     }
 
@@ -124,7 +95,7 @@ class QuadraticEquationTest {
     void test_numberOfRealSolutions_a_1_b_1_c_0() {
         QuadraticEquation cut = new QuadraticEquation(1,1,0);
         double expectedNumberOfRealSolutions = 2;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
+        int actualNumberOfRealSolutions = cut.numberOfSolutions();
         Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
     }
 
@@ -132,7 +103,7 @@ class QuadraticEquationTest {
     void test_numberOfRealSolutions_a_1_b_4_c_3() {
         QuadraticEquation cut = new QuadraticEquation(1,4,3);
         double expectedNumberOfRealSolutions = 2;
-        int actualNumberOfRealSolutions = cut.numberOfRealSolutions();
+        int actualNumberOfRealSolutions = cut.numberOfSolutions();
         Assertions.assertEquals(expectedNumberOfRealSolutions,actualNumberOfRealSolutions);
     }
 
@@ -146,17 +117,16 @@ class QuadraticEquationTest {
 
     @Test // expect that there will be 1 solutions: 0 of x = 0
     void test_realSolutions_a_0_b_1_c_0() {
-        QuadraticEquation cut = new QuadraticEquation(0,1,0);
-        ArrayList<Double> actualRealSolutions = cut.realSolutions();
-        ArrayList<Double> expectedRealSolutions = new ArrayList<>(List.of(0.0));
-        Assertions.assertEquals(expectedRealSolutions,actualRealSolutions);
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            new QuadraticEquation(0,1,0);
+        });
     }
 
     @Test // expect that there will be 99 solutions of 0 = 0
     void test_realSolutions_a_0_b_0_c_0() {
-        QuadraticEquation cut = new QuadraticEquation(0,0,0);
-        ArrayList<Double> actualRealSolutions = cut.realSolutions();
-        Assertions.assertEquals(99,actualRealSolutions.size());
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            new QuadraticEquation(0,0,0);
+        });
     }
 
     @Test // expect that there will be solution -1 of equation x^2 + 2 x + 1 = 0
@@ -185,10 +155,9 @@ class QuadraticEquationTest {
 
     @Test // expect that there will be 1 solutions: -1 of x + 1 = 0
     void test_realSolutions_a_0_b_1_c_1() {
-        QuadraticEquation cut = new QuadraticEquation(0,1,1);
-        ArrayList<Double> actualRealSolutions = cut.realSolutions();
-        ArrayList<Double> expectedRealSolutions = new ArrayList<>(List.of(-1.0));
-        Assertions.assertEquals(expectedRealSolutions,actualRealSolutions);
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            new QuadraticEquation(0,1,1);
+        });
     }
 
     @Test // expect that there will be 2 solutions: -2 and 3 of x^2 + x + 1 = 0
