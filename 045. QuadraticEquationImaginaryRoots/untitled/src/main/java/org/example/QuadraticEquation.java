@@ -34,16 +34,6 @@ public class QuadraticEquation {
         double solution1;
         double solution2;
         double delta = calculateDeltaForEquation();
-        if(a == 0 && b == 0 && c == 0){
-            for (int i = 1; i < 99; i++) {
-                arraySolutions.add((double)i);
-            };
-        }
-        if(a == 0){
-            solution1 = (double)-c / b;
-            arraySolutions.add(solution1);
-            return arraySolutions;
-        }
         if(delta > 0){
             solution1 = (-b - Math.sqrt(delta)) / (2 * a);
             solution2 = (-b + Math.sqrt(delta)) / (2 * a);
@@ -67,10 +57,7 @@ public class QuadraticEquation {
         double solution2real;
         double delta = this.calculateDeltaForEquation();
         if(delta < 0){
-            //α = a + ib, and β = c + id.
-            //      double real = -b / (2 * a);
-            //      double imaginary = Math.sqrt(-determinant) / (2 * a);
-            solution1real = -b / (2 * a);
+            solution1real = (double) -b / (2 * a);
             solution1imaginary = Math.sqrt(-delta) / (2 * a);
 
             arraySolutions.add(solution1real);
@@ -85,5 +72,17 @@ public class QuadraticEquation {
         String solution1 = imaginarySolutions.get(0) + " + " + imaginarySolutions.get(1) + "i";
         String solution2 = imaginarySolutions.get(0) + " - " + imaginarySolutions.get(1) + "i";
         return "Imaginary solutions are: " + solution1 + " and " + solution2;
+    }
+
+    public String outputSolutions(){
+        ArrayList<Double> realSolutions = realSolutions();
+        double delta = calculateDeltaForEquation();
+        if(delta < 0){
+            return outputImaginarySolutions();
+        }else if(delta == 0){
+            return "Real solution: " + realSolutions.get(0);
+        }else{
+            return "Imaginary solutions are: " + realSolutions.get(0) + " and " + realSolutions.get(1);
+        }
     }
 }
