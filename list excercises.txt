@@ -145,3 +145,10 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 044. (Create a rational-number calculator) Write a program similar to Listing 7.9,
 	Calculator.java. Instead of using integers, use rationals, create methods add, substract, multiply and divide. 
 	example: 1/2 + 3/5 = 11/10	
+045. Program that calculates roots of quadratic equation (real and complex)
+046. (Maximum element in ArrayList) Write the following method that returns the
+	maximum value in an ArrayList of integers. The method returns null if the
+	list is null or the list size is 0.
+	public static Integer max(ArrayList<Integer> list)
+	Write a test program that prompts the user to enter a sequence of numbers ending
+	with 0 and invokes this method to return the largest number in the input.
