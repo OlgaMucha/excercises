@@ -102,4 +102,29 @@ public class ArrayNBijN {
             System.out.println();
         }
     }
+
+    public void outputLargestColsAndRows(int[][] array){
+        ArrayList<Integer> maxInRowsArrayList = this.maxInRows(array);
+        ArrayList<Integer> maxInColsArrayList = this.maxInCols(array);
+        String maxInRowsOutput = "";
+        for (int i = 0; i < maxInRowsArrayList.size(); i++) {
+            if(i == maxInRowsArrayList.size() - 1){
+                maxInRowsOutput = maxInRowsOutput.concat(maxInRowsArrayList.get(i) + "");
+            }else{
+                maxInRowsOutput = maxInRowsOutput.concat(maxInRowsArrayList.get(i) + ", ");
+            }
+        }
+
+        String maxInColsOutput = "";
+        for (int i = 0; i < maxInColsArrayList.size(); i++) {
+            if(i == maxInColsArrayList.size() - 1){
+                maxInColsOutput = maxInColsOutput.concat(maxInColsArrayList.get(i) + "");
+            }else{
+                maxInColsOutput = maxInColsOutput.concat(maxInColsArrayList.get(i) + ", ");
+            }
+        }
+
+        System.out.println("The largest row index: " + maxInRowsOutput);
+        System.out.println("The largest column index: " + maxInColsOutput);
+    }
 }
