@@ -12,7 +12,7 @@ public class ArrayNBijN {
      * @return int size of array
      */
     private int userInput(){
-        System.out.println("What is the size of array?");
+        System.out.print("Enter the array size n: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
@@ -110,6 +110,7 @@ public class ArrayNBijN {
      * creates output for array
      */
     public void outputArray(int[][] array){
+        System.out.println("The random array is");
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
                 System.out.print(array[i][j] + " ");
