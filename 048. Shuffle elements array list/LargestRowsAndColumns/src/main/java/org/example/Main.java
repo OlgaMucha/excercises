@@ -8,11 +8,8 @@ public class Main {
         ArrayNBijN arrayNBijN = new ArrayNBijN();
 
         int[][] array = arrayNBijN.fillInArray();
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                System.out.print(array[i][j]);
-            }
-            System.out.println();
-        }
+        System.out.println("The largest row index: " + arrayNBijN.maxInRows(array).toString());
+        System.out.println("The largest column index: " + arrayNBijN.maxInCols(array).toString());
     }
+
 }
