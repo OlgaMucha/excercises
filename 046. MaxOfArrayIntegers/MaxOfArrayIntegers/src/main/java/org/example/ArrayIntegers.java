@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class ArrayIntegers {
 
@@ -14,14 +15,14 @@ public class ArrayIntegers {
     public ArrayIntegers() {
     }
 
-    public ArrayList<Integer> getArrayList() {
-        return arrayList;
+    public void setArrayList(ArrayList<Integer> arrayList) {
+        this.arrayList = arrayList;
     }
 
     public int getMaxOfArrayIntegers(){
         int max = Integer.MIN_VALUE;
         if(arrayList.size() == 0){
-            return max;
+            return 0;
         }
         for (Integer integer : arrayList) {
             if (integer >= max) {
@@ -29,6 +30,30 @@ public class ArrayIntegers {
             }
         }
         return max;
+    }
+
+    public ArrayList<Integer> userInputArrayList() {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        ArrayList<String> arrayListString = new ArrayList<>();
+
+        //User input
+        System.out.println("Enter elements of array, enter 0 to stop");
+
+        //user input until stop = 0
+        Scanner scanner = new Scanner(System.in);
+        String element = scanner.nextLine();
+        while(!element.equals("0")){
+            arrayListString.add(element);
+            element = scanner.nextLine();
+        }
+
+        //parse user input from string to integer
+        for(String string : arrayListString){
+            int number = Integer.parseInt(string);
+            arrayList.add(number);
+        }
+
+        return arrayList;
     }
 
 }
