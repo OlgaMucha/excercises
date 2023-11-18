@@ -12,6 +12,10 @@ public class ArrayIntegers {
         this.arrayList = arrayList;
     }
 
+    public ArrayList<Integer> getArrayList() {
+        return arrayList;
+    }
+
     public ArrayIntegers() {
     }
 
