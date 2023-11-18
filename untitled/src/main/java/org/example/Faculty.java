@@ -1,7 +1,6 @@
 package org.example;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Faculty extends Employee{
     public String officeHours;

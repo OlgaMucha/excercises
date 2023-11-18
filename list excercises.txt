@@ -162,3 +162,6 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	each class to display the class name and the person’s name.
 	Write a test program that creates a Person, Student, Employee, Faculty, and Staff, and invokes
 	their toString() methods.
+048. (Shuffle ArrayList) Write the following method that shuffles the elements in
+	an ArrayList of integers:
+	public static void shuffle(ArrayList<Integer> list)
