@@ -21,15 +21,7 @@ public class QuadraticEquation {
         return b * b - 4 *  a * c;
     }
 
-    public int numberOfSolutions(){
-        double delta = this.calculateDeltaForEquation();
-        if(delta < 0){
-            return 2;
-        }
-        return this.realSolutions().size();
-    }
-
-    public ArrayList<Double> realSolutions(){
+        public ArrayList<Double> realSolutions(){
         ArrayList<Double> arraySolutions = new ArrayList<>();
         double solution1;
         double solution2;
@@ -49,40 +41,34 @@ public class QuadraticEquation {
         }
     }
 
-    public ArrayList<Double> imaginarySolutions() {
-        ArrayList<Double> arraySolutions = new ArrayList<>();
-        double solution1imaginary;
-        double solution1real;
-        double solution2imaginary;
-        double solution2real;
+    public ArrayList<String> imaginarySolutions() {
+        ArrayList<String> arrayImaginarySolutions = new ArrayList<>();
+        double solutionRealPart;
+        double solutionImaginaryPart;
         double delta = this.calculateDeltaForEquation();
         if(delta < 0){
-            solution1real = (double) -b / (2 * a);
-            solution1imaginary = Math.sqrt(-delta) / (2 * a);
-
-            arraySolutions.add(solution1real);
-            arraySolutions.add(solution1imaginary);
+            solutionRealPart = (double) -b / (2 * a);
+            solutionImaginaryPart = Math.sqrt(-delta) / (2 * a);
+            arrayImaginarySolutions.add(String.format("%.2f + %.2fi",solutionRealPart,solutionImaginaryPart));
+            arrayImaginarySolutions.add(String.format("%.2f - %.2fi",solutionRealPart,solutionImaginaryPart));
         }
-
-        return arraySolutions;
-    }
-
-    public String outputImaginarySolutions(){
-        ArrayList<Double> imaginarySolutions = imaginarySolutions();
-        String solution1 = imaginarySolutions.get(0) + " + " + imaginarySolutions.get(1) + "i";
-        String solution2 = imaginarySolutions.get(0) + " - " + imaginarySolutions.get(1) + "i";
-        return "Imaginary solutions are: " + solution1 + " and " + solution2;
+        return arrayImaginarySolutions;
     }
 
     public String outputSolutions(){
         ArrayList<Double> realSolutions = realSolutions();
+        ArrayList<String> imaginarySolutions = imaginarySolutions();
         double delta = calculateDeltaForEquation();
         if(delta < 0){
-            return outputImaginarySolutions();
+            String imaginaryRoot1 = imaginarySolutions.get(0);
+            String imaginaryRoot2 = imaginarySolutions.get(1);
+            return "There are two imaginary roots: " + imaginaryRoot1 + " and " + imaginaryRoot2;
         }else if(delta == 0){
-            return "Real solution: " + realSolutions.get(0);
+            return String.format("There is one real root: %.2f", realSolutions.get(0));
         }else{
-            return "Imaginary solutions are: " + realSolutions.get(0) + " and " + realSolutions.get(1);
+            double realRoot1 = realSolutions.get(0);
+            double realRoot2 = realSolutions.get(1);
+            return String.format("There are two real roots: %.2f and %.2f",realRoot1, realRoot2);
         }
     }
 }
