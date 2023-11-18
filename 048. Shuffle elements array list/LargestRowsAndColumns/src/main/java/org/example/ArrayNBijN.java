@@ -6,13 +6,21 @@ import java.util.Scanner;
 
 public class ArrayNBijN {
     //how many elements?
+
+    /**Method name: userInput
+     * User enters size of array
+     * @return int size of array
+     */
     private int userInput(){
         System.out.println("What is the size of array?");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
 
-    //fill in array
+    /**Method fillInArray
+     * Array of a given size is filled in randomly with 0's and 1's
+     * @return filled in array
+     */
     public int[][] fillInArray(){
         int size = this.userInput();
         int[][] array = new int[size][size];
@@ -25,6 +33,11 @@ public class ArrayNBijN {
         this.outputArray(array);
         return array;
     }
+
+    /**Method name: maxElementOfArrayList
+     * method returns a max value for a given array list of integers
+     * @return int max value
+     */
     private int maxElementOfArrayList(ArrayList<Integer> array){
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < array.size(); i++) {
@@ -35,6 +48,11 @@ public class ArrayNBijN {
         return max;
     }
 
+    /**Method name: calculateMaxOfLine
+     * Method calculates totals per line (row and column) and returns them in array list.
+     * first arraylist size/2 elements - sum rows in array list, last arraylist size/2 elements - sum cols
+     * @return array list with totals
+     */
     public ArrayList<Integer> calculateMaxOfLine(int[][] array ){
         ArrayList<Integer> arrayList = new ArrayList<>();
 
@@ -58,42 +76,39 @@ public class ArrayNBijN {
         return arrayList;
     }
 
-    public ArrayList<Integer> maxInRows(int[][] array){
+    /**Method name: maxInLine
+     * Method checks in which row/col is total maximal and returns position numbers in array
+     * @return positions with max total per row/col in array list
+     */
+
+    public ArrayList<Integer> maxInLine(int[][] array, String choice){
         ArrayList<Integer> arrayList = calculateMaxOfLine(array);
         int arraySize = arrayList.size()/2;
-        ArrayList<Integer> arrayTotalsPerRow = new ArrayList<>();
-        ArrayList<Integer> arrayMaxPositionsInRow = new ArrayList<>();
+        ArrayList<Integer> arrayTotals = new ArrayList<>();
+        ArrayList<Integer> arrayMaxPositions = new ArrayList<>();
 
-        for (int i = 0; i < arraySize; i++) {
-            arrayTotalsPerRow.add(arrayList.get(i));
-        }
-        int max = maxElementOfArrayList(arrayTotalsPerRow);
-        for (int i = 0; i < arrayTotalsPerRow.size(); i++) {
-            if(arrayTotalsPerRow.get(i) == max){
-                arrayMaxPositionsInRow.add(i);
+        if(choice.equals("ROW")){
+            for (int i = 0; i < arraySize; i++) {
+                arrayTotals.add(arrayList.get(i));
+            }
+        } else if (choice.equals("COL")){
+            for (int i = arraySize; i < arrayList.size(); i++) {
+                arrayTotals.add(arrayList.get(i));
             }
         }
-        return arrayMaxPositionsInRow;
-    }
 
-    public ArrayList<Integer> maxInCols(int[][] array){
-        ArrayList<Integer> arrayList = calculateMaxOfLine(array);
-        int arraySize = arrayList.size()/2;
-        ArrayList<Integer> arrayTotalsPerCol = new ArrayList<>();
-        ArrayList<Integer> arrayMaxPositionsInCol = new ArrayList<>();
-
-        for (int i = arraySize; i < arrayList.size(); i++) {
-            arrayTotalsPerCol.add(arrayList.get(i));
-        }
-        int max = maxElementOfArrayList(arrayTotalsPerCol);
-        for (int i = 0; i < arrayTotalsPerCol.size(); i++) {
-            if(arrayTotalsPerCol.get(i) == max){
-                arrayMaxPositionsInCol.add(i);
+        int max = maxElementOfArrayList(arrayTotals);
+        for (int i = 0; i < arrayTotals.size(); i++) {
+            if(arrayTotals.get(i) == max){
+                arrayMaxPositions.add(i);
             }
         }
-        return arrayMaxPositionsInCol;
+        return arrayMaxPositions;
     }
 
+    /**Method name: outputArray
+     * creates output for array
+     */
     public void outputArray(int[][] array){
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
@@ -103,28 +118,35 @@ public class ArrayNBijN {
         }
     }
 
+    /**Method name: outputLargestColsAndRows
+     * creates final output with the largest index for row and col
+     * @param array
+     */
     public void outputLargestColsAndRows(int[][] array){
-        ArrayList<Integer> maxInRowsArrayList = this.maxInRows(array);
-        ArrayList<Integer> maxInColsArrayList = this.maxInCols(array);
-        String maxInRowsOutput = "";
-        for (int i = 0; i < maxInRowsArrayList.size(); i++) {
-            if(i == maxInRowsArrayList.size() - 1){
-                maxInRowsOutput = maxInRowsOutput.concat(maxInRowsArrayList.get(i) + "");
-            }else{
-                maxInRowsOutput = maxInRowsOutput.concat(maxInRowsArrayList.get(i) + ", ");
-            }
-        }
+        ArrayList<Integer> maxInRowsArrayList = this.maxInLine(array,"ROW");
+        ArrayList<Integer> maxInColsArrayList = this.maxInLine(array,"COL");
 
-        String maxInColsOutput = "";
-        for (int i = 0; i < maxInColsArrayList.size(); i++) {
-            if(i == maxInColsArrayList.size() - 1){
-                maxInColsOutput = maxInColsOutput.concat(maxInColsArrayList.get(i) + "");
-            }else{
-                maxInColsOutput = maxInColsOutput.concat(maxInColsArrayList.get(i) + ", ");
-            }
-        }
+        String maxInRowsOutput = createOutputArrayList(maxInRowsArrayList);
+        String maxInColsOutput = createOutputArrayList(maxInColsArrayList);
 
         System.out.println("The largest row index: " + maxInRowsOutput);
         System.out.println("The largest column index: " + maxInColsOutput);
+    }
+
+    /**Method name: getFinalOutput
+     * Presents output for array list with only integer elements with comma, last one without comma
+     * @param maxInLineArrayList
+     * @return
+     */
+    private static String createOutputArrayList(ArrayList<Integer> maxInLineArrayList) {
+        String maxInLineOutput = "";
+        for (int i = 0; i < maxInLineArrayList.size(); i++) {
+            if(i == maxInLineArrayList.size() - 1){
+                maxInLineOutput = maxInLineOutput.concat(maxInLineArrayList.get(i) + "");
+            }else{
+                maxInLineOutput = maxInLineOutput.concat(maxInLineArrayList.get(i) + ", ");
+            }
+        }
+        return maxInLineOutput;
     }
 }
