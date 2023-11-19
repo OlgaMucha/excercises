@@ -317,7 +317,7 @@ class ArrayNBijNTest {
     }
 
     @Test
-    void test_outputArray_array3by3_1_1_1_1_0_0_0_0_1_1_1_1_0_0_0_0(){
+    void test_outputArray_array4by4_1_1_1_1_0_0_0_0_1_1_1_1_0_0_0_0(){
         //Arrange
         ArrayNBijN cut = new ArrayNBijN();
         //Act
@@ -330,6 +330,87 @@ class ArrayNBijNTest {
         String actualOutput = cut.outputArray(array);
         String expectedOutput = "1 1 1 1 \n0 0 0 0 \n1 1 1 1 \n0 0 0 0 \n";
 
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputLargestColsAndRows_array0by0(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+
+        };
+
+        String actualOutput = cut.outputLargestColsAndRows(array);
+        String expectedOutput = "The largest row index: \n" +
+                "The largest column index: ";
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputLargestColsAndRows_array1by1_1(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1}
+        };
+
+        String actualOutput = cut.outputLargestColsAndRows(array);
+        String expectedOutput = "The largest row index: 0\n" +
+                "The largest column index: 0";
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputLargestColsAndRows_array2by2_1_1_1_0(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1, 1},
+                {1, 0}
+        };
+
+        String actualOutput = cut.outputLargestColsAndRows(array);
+        String expectedOutput = "The largest row index: 0\n" +
+                "The largest column index: 0";
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputLargestColsAndRows_array3by3_1_1_1_0_0_0_1_1_1(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1, 1, 1},
+                {0, 0, 0},
+                {1, 1, 1}
+        };
+
+        String actualOutput = cut.outputLargestColsAndRows(array);
+        String expectedOutput = "The largest row index: 0, 2\n" +
+                                "The largest column index: 0, 1, 2";
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputLargestColsAndRows_array4by4_1_1_1_1_0_0_0_0_1_1_1_1_0_0_0_0(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1,1,1,1},
+                {0,0,0,0},
+                {1,1,1,1},
+                {0,0,0,0}
+        };
+
+        String actualOutput = cut.outputLargestColsAndRows(array);
+        String expectedOutput = "The largest row index: 0, 2\n" +
+                "The largest column index: 0, 1, 2, 3";
         Assertions.assertEquals(expectedOutput,actualOutput);
     }
 }

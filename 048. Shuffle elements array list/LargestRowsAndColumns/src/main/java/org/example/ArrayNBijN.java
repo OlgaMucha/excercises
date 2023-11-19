@@ -123,15 +123,15 @@ public class ArrayNBijN {
      * creates final output with the largest index for row and col
      * @param array
      */
-    public void outputLargestColsAndRows(int[][] array){
+    public String outputLargestColsAndRows(int[][] array){
         ArrayList<Integer> maxInRowsArrayList = this.maxInLine(array,"ROW");
         ArrayList<Integer> maxInColsArrayList = this.maxInLine(array,"COL");
 
         String maxInRowsOutput = createOutputArrayList(maxInRowsArrayList);
         String maxInColsOutput = createOutputArrayList(maxInColsArrayList);
 
-        System.out.println("The largest row index: " + maxInRowsOutput);
-        System.out.println("The largest column index: " + maxInColsOutput);
+       return  "The largest row index: " + maxInRowsOutput + "\n" +
+               "The largest column index: " + maxInColsOutput;
     }
 
     /**Method name: getFinalOutput
