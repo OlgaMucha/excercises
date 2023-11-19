@@ -53,7 +53,7 @@ public class ArrayNBijN {
      * first arraylist size/2 elements - sum rows in array list, last arraylist size/2 elements - sum cols
      * @return array list with totals
      */
-    public ArrayList<Integer> calculateMaxOfLine(int[][] array ){
+    public ArrayList<Integer> calculateTotalPerLine(int[][] array ){
         ArrayList<Integer> arrayList = new ArrayList<>();
 
         //first array.length elements - sum rows in array list
@@ -82,7 +82,7 @@ public class ArrayNBijN {
      */
 
     public ArrayList<Integer> maxInLine(int[][] array, String choice){
-        ArrayList<Integer> arrayList = calculateMaxOfLine(array);
+        ArrayList<Integer> arrayList = calculateTotalPerLine(array);
         int arraySize = arrayList.size()/2;
         ArrayList<Integer> arrayTotals = new ArrayList<>();
         ArrayList<Integer> arrayMaxPositions = new ArrayList<>();
