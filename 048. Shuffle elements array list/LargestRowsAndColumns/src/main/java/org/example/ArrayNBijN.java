@@ -28,7 +28,7 @@ public class ArrayNBijN {
                 array[i][j] = (int)Math.round(Math.random());
             }
         }
-        this.outputArray(array);
+        System.out.println(this.outputArray(array));
         return array;
     }
 
@@ -107,14 +107,16 @@ public class ArrayNBijN {
     /**Method name: outputArray
      * creates output for array
      */
-    public void outputArray(int[][] array){
+    public String outputArray(int[][] array){
         System.out.println("The random array is");
+        String output = "";
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
-                System.out.print(array[i][j] + " ");
+                output = output.concat(array[i][j] + " ");
             }
-            System.out.println();
+            output = output.concat("\n");
         }
+        return output;
     }
 
     /**Method name: outputLargestColsAndRows

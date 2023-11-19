@@ -2,13 +2,9 @@ package org.example;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ArrayNBijNTest {
 
@@ -165,7 +161,7 @@ class ArrayNBijNTest {
             for (int j = 0; j < arrayActual.length; j++) {
                 Assertions.assertTrue((arrayActual[i][j] == 0 || arrayActual[i][j] == 1)&&arrayActual.length == 2);
             }
-        };
+        }
     }
 
     @Test //max in rows of this array is 0 and is reached in every row
@@ -273,5 +269,67 @@ class ArrayNBijNTest {
         ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of());
 
         Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
+
+    @Test
+    void test_outputArray_array1by1_1(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1}
+        };
+        String actualOutput = cut.outputArray(array);
+        String expectedOutput = "1 \n";
+
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputArray_array2by2_1_1_1_0(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1,1},
+                {1,0}
+        };
+        String actualOutput = cut.outputArray(array);
+        String expectedOutput = "1 1 \n1 0 \n";
+
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputArray_array3by3_1_1_1_0_0_0_1_1_1(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1,1,1},
+                {0,0,0},
+                {1,1,1}
+        };
+        String actualOutput = cut.outputArray(array);
+        String expectedOutput = "1 1 1 \n0 0 0 \n1 1 1 \n";
+
+        Assertions.assertEquals(expectedOutput,actualOutput);
+    }
+
+    @Test
+    void test_outputArray_array3by3_1_1_1_1_0_0_0_0_1_1_1_1_0_0_0_0(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] array = {
+                {1,1,1,1},
+                {0,0,0,0},
+                {1,1,1,1},
+                {0,0,0,0}
+        };
+        String actualOutput = cut.outputArray(array);
+        String expectedOutput = "1 1 1 1 \n0 0 0 0 \n1 1 1 1 \n0 0 0 0 \n";
+
+        Assertions.assertEquals(expectedOutput,actualOutput);
     }
 }
