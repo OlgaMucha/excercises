@@ -11,9 +11,10 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLine_Array2by2_0_0_0_0() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         int[][] array = {
-                {0,0},{0,0}
+                {0,0},
+                {0,0}
         };
 
         //Act
@@ -25,7 +26,7 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLine_Array1by1_1() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(1);
         int[][] array = {
                 {1}
         };
@@ -40,9 +41,10 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLine_Array2by2_1_0_0_1() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         int[][] array = {
-                {1,0},{0,1}
+                {1,0},
+                {0,1}
         };
 
         //Act
@@ -55,9 +57,10 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLine_Array2by2_1_1_0_0() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         int[][] array = {
-                {1,1},{0,0}
+                {1,1},
+                {0,0}
         };
 
         //Act
@@ -70,9 +73,10 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLine_Array2by2_1_1_1_0() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         int[][] array = {
-                {1,1},{1,0}
+                {1,1},
+                {1,0}
         };
 
         //Act
@@ -85,7 +89,7 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLineArray0by0() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(0);
         int[][] array = {
         };
 
@@ -99,9 +103,11 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLineArray3by3_1_1_1_0_0_0_1_0_0() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(0);
         int[][] array = {
-                {1,1,1},{0,0,0},{1,0,0}
+                {1,1,1},
+                {0,0,0},
+                {1,0,0}
         };
 
         //Act
@@ -114,9 +120,11 @@ class ArrayNBijNTest {
     @Test
     void test_calculateTotalPerLineArray3by3_0_0_0_0_0_0_0_0_0() {
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(3);
         int[][] array = {
-                {0,0,0},{0,0,0},{0,0,0}
+                {0,0,0},
+                {0,0,0},
+                {0,0,0}
         };
 
         //Act
@@ -129,13 +137,13 @@ class ArrayNBijNTest {
     @Test //all elements of randomly generated array are 0 or 1
     void test_fillInArray_array3by3(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(3);
         //Act
-        int[][] arrayActual = cut.fillInArray(3);
+        int[][] arrayActual = cut.fillInArray();
         //Assert
         for (int i = 0; i < arrayActual.length; i++) {
             for (int j = 0; j < arrayActual.length; j++) {
-                Assertions.assertTrue((arrayActual[i][j] == 0 || arrayActual[i][j] == 1)&&arrayActual.length == 3);
+                Assertions.assertTrue((arrayActual[i][j] == 0 || arrayActual[i][j] == 1)&&arrayActual.length == cut.getSize());
             }
         }
     }
@@ -143,23 +151,23 @@ class ArrayNBijNTest {
     @Test //all elements of randomly generated array are 0 or 1
     void test_fillInArray_array1by1(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(1);
         //Act
-        int[][] arrayActual = cut.fillInArray(1);
+        int[][] arrayActual = cut.fillInArray();
         //Assert
-        Assertions.assertTrue((arrayActual[0][0] == 0 || arrayActual[0][0] == 1)&&arrayActual.length == 1);
+        Assertions.assertTrue((arrayActual[0][0] == 0 || arrayActual[0][0] == 1)&&arrayActual.length == cut.getSize());
     }
 
     @Test //all elements of randomly generated array are 0 or 1
     void test_fillInArray_array2by2(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         //Act
-        int[][] arrayActual = cut.fillInArray(2);
+        int[][] arrayActual = cut.fillInArray();
         //Assert
         for (int i = 0; i < arrayActual.length; i++) {
             for (int j = 0; j < arrayActual.length; j++) {
-                Assertions.assertTrue((arrayActual[i][j] == 0 || arrayActual[i][j] == 1)&&arrayActual.length == 2);
+                Assertions.assertTrue((arrayActual[i][j] == 0 || arrayActual[i][j] == 1)&&arrayActual.length == cut.getSize());
             }
         }
     }
@@ -167,11 +175,13 @@ class ArrayNBijNTest {
     @Test //max in rows of this array is 0 and is reached in every row
     void test_maxInLine_array3by3_0_0_0_0_0_0_0_0_0(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(3);
         //Act
         String choice = "ROW";
         int[][] array = {
-                {0,0,0},{0,0,0},{0,0,0}
+                {0,0,0},
+                {0,0,0},
+                {0,0,0}
         };
         ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
         ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0,1,2));
@@ -182,11 +192,12 @@ class ArrayNBijNTest {
     @Test //max in rows of this array is 2 and is reached in row 0
     void test_maxInLine_array2by2_1_1_1_0rows(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         //Act
         String choice = "ROW";
         int[][] array = {
-                {1,1},{1,0}
+                {1,1},
+                {1,0}
         };
         ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
         ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0));
@@ -197,11 +208,12 @@ class ArrayNBijNTest {
     @Test //max in cols of this array is 2 and is reached in col 0
     void test_maxInLine_array2by2_1_1_1_0cols(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         //Act
         String choice = "COL";
         int[][] array = {
-                {1,1},{1,0}
+                {1,1},
+                {1,0}
         };
         ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
         ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0));
@@ -212,7 +224,7 @@ class ArrayNBijNTest {
     @Test //max in cols of this array is 1 and is reached in col 0
     void test_maxInLine_array1by1_1cols(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(1);
         //Act
         String choice = "COL";
         int[][] array = {
@@ -227,7 +239,7 @@ class ArrayNBijNTest {
     @Test //max in rows of this array is 0 and is reached in row 0
     void test_maxInLine_array1by1_1rows(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(1);
         //Act
         String choice = "ROW";
         int[][] array = {
@@ -242,7 +254,7 @@ class ArrayNBijNTest {
     @Test //max in rows of this array is 4 and is reached in rows 0 and 2
     void test_maxInLine_array4by4_1_1_1_1_1_1_0_0_1_1_1_1_1_0_0_0rows(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(4);
         //Act
         String choice = "ROW";
         int[][] array = {
@@ -260,7 +272,7 @@ class ArrayNBijNTest {
     @Test //max in rows of this array doesn't exist and is not reached in any row
     void test_maxInLine_array0by0rows(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(0);
         //Act
         String choice = "ROW";
         int[][] array = {
@@ -274,7 +286,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputArray_array1by1_1(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(1);
         //Act
         int[][] array = {
                 {1}
@@ -288,7 +300,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputArray_array2by2_1_1_1_0(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         //Act
         int[][] array = {
                 {1,1},
@@ -303,7 +315,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputArray_array3by3_1_1_1_0_0_0_1_1_1(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(3);
         //Act
         int[][] array = {
                 {1,1,1},
@@ -319,7 +331,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputArray_array4by4_1_1_1_1_0_0_0_0_1_1_1_1_0_0_0_0(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(4);
         //Act
         int[][] array = {
                 {1,1,1,1},
@@ -336,7 +348,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputLargestColsAndRows_array0by0(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(0);
         //Act
         int[][] array = {
 
@@ -351,7 +363,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputLargestColsAndRows_array1by1_1(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(1);
         //Act
         int[][] array = {
                 {1}
@@ -366,7 +378,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputLargestColsAndRows_array2by2_1_1_1_0(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(2);
         //Act
         int[][] array = {
                 {1, 1},
@@ -382,7 +394,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputLargestColsAndRows_array3by3_1_1_1_0_0_0_1_1_1(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(3);
         //Act
         int[][] array = {
                 {1, 1, 1},
@@ -399,7 +411,7 @@ class ArrayNBijNTest {
     @Test
     void test_outputLargestColsAndRows_array4by4_1_1_1_1_0_0_0_0_1_1_1_1_0_0_0_0(){
         //Arrange
-        ArrayNBijN cut = new ArrayNBijN();
+        ArrayNBijN cut = new ArrayNBijN(4);
         //Act
         int[][] array = {
                 {1,1,1,1},

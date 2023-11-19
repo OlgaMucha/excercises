@@ -1,30 +1,38 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
 
 public class ArrayNBijN {
 
-    /**Method name: userInput
-     * User enters size of array
-     * @return int size of array
-     */
-    public int userInput(){
-        System.out.print("Enter the array size n: ");
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
+    //region getters, setters and constructors
+    private int size;
+
+    public int getSize() {
+        return size;
     }
+
+    public ArrayNBijN(int size) {
+        this.size = size;
+    }
+
+    public ArrayNBijN() {
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    //endregion
+
 
     /**Method fillInArray
      * Array of a given size is filled in randomly with 0's and 1's
      * @return filled in array
      */
-    public int[][] fillInArray(int size){
-        int[][] array = new int[size][size];
-        Random random = new Random(1);
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+    public int[][] fillInArray(){
+        int[][] array = new int[this.size][this.size];
+        for (int i = 0; i < this.size; i++) {
+            for (int j = 0; j < this.size; j++) {
                 array[i][j] = (int)Math.round(Math.random());
             }
         }
@@ -38,9 +46,9 @@ public class ArrayNBijN {
      */
     private int maxElementOfArrayList(ArrayList<Integer> array){
         int max = Integer.MIN_VALUE;
-        for (int i = 0; i < array.size(); i++) {
-            if(array.get(i) >= max){
-                max = array.get(i);
+        for (Integer integer : array) {
+            if (integer >= max) {
+                max = integer;
             }
         }
         return max;
@@ -55,10 +63,10 @@ public class ArrayNBijN {
         ArrayList<Integer> arrayList = new ArrayList<>();
 
         //first array.length elements - sum rows in array list
-        for (int i = 0; i < array.length; i++) {
+        for (int[] ints : array) {
             int sumInRow = 0;
             for (int j = 0; j < array.length; j++) {
-                sumInRow = sumInRow + array[i][j];
+                sumInRow = sumInRow + ints[j];
             }
             arrayList.add(sumInRow);
         }
@@ -66,8 +74,8 @@ public class ArrayNBijN {
         //last array.length elements - sum cols in array list
         for (int j = 0; j < array.length; j++) {
             int sumInCol = 0;
-            for (int i = 0; i < array.length; i++) {
-                sumInCol = sumInCol + array[i][j];
+            for (int[] ints : array) {
+                sumInCol = sumInCol + ints[j];
             }
             arrayList.add(sumInCol);
         }
@@ -110,9 +118,9 @@ public class ArrayNBijN {
     public String outputArray(int[][] array){
         System.out.println("The random array is");
         String output = "";
-        for (int i = 0; i < array.length; i++) {
+        for (int[] ints : array) {
             for (int j = 0; j < array.length; j++) {
-                output = output.concat(array[i][j] + " ");
+                output = output.concat(ints[j] + " ");
             }
             output = output.concat("\n");
         }
@@ -121,7 +129,6 @@ public class ArrayNBijN {
 
     /**Method name: outputLargestColsAndRows
      * creates final output with the largest index for row and col
-     * @param array
      */
     public String outputLargestColsAndRows(int[][] array){
         ArrayList<Integer> maxInRowsArrayList = this.maxInLine(array,"ROW");
@@ -136,10 +143,9 @@ public class ArrayNBijN {
 
     /**Method name: getFinalOutput
      * Presents output for array list with only integer elements with comma, last one without comma
-     * @param maxInLineArrayList
-     * @return
+     * @return String with positions with comma between but not at the end
      */
-    private static String createOutputArrayList(ArrayList<Integer> maxInLineArrayList) {
+    private String createOutputArrayList(ArrayList<Integer> maxInLineArrayList) {
         String maxInLineOutput = "";
         for (int i = 0; i < maxInLineArrayList.size(); i++) {
             if(i == maxInLineArrayList.size() - 1){
