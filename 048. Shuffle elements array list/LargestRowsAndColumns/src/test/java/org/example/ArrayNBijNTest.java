@@ -167,4 +167,111 @@ class ArrayNBijNTest {
             }
         };
     }
+
+    @Test //max in rows of this array is 0 and is reached in every row
+    void test_maxInLine_array3by3_0_0_0_0_0_0_0_0_0(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        String choice = "ROW";
+        int[][] array = {
+                {0,0,0},{0,0,0},{0,0,0}
+        };
+        ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
+        ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0,1,2));
+
+        Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
+
+    @Test //max in rows of this array is 2 and is reached in row 0
+    void test_maxInLine_array2by2_1_1_1_0rows(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        String choice = "ROW";
+        int[][] array = {
+                {1,1},{1,0}
+        };
+        ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
+        ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0));
+
+        Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
+
+    @Test //max in cols of this array is 2 and is reached in col 0
+    void test_maxInLine_array2by2_1_1_1_0cols(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        String choice = "COL";
+        int[][] array = {
+                {1,1},{1,0}
+        };
+        ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
+        ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0));
+
+        Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
+
+    @Test //max in cols of this array is 1 and is reached in col 0
+    void test_maxInLine_array1by1_1cols(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        String choice = "COL";
+        int[][] array = {
+                {1}
+        };
+        ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
+        ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0));
+
+        Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
+
+    @Test //max in rows of this array is 0 and is reached in row 0
+    void test_maxInLine_array1by1_1rows(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        String choice = "ROW";
+        int[][] array = {
+                {1}
+        };
+        ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
+        ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0));
+
+        Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
+
+    @Test //max in rows of this array is 4 and is reached in rows 0 and 2
+    void test_maxInLine_array4by4_1_1_1_1_1_1_0_0_1_1_1_1_1_0_0_0rows(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        String choice = "ROW";
+        int[][] array = {
+                {1,1,1,1},
+                {1,1,0,0},
+                {1,1,1,1},
+                {1,0,0,0}
+        };
+        ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
+        ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of(0,2));
+
+        Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
+
+    @Test //max in rows of this array doesn't exist and is not reached in any row
+    void test_maxInLine_array0by0rows(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        String choice = "ROW";
+        int[][] array = {
+        };
+        ArrayList<Integer> arrayListActual = cut.maxInLine(array,choice);
+        ArrayList<Integer> arrayListExpected = new ArrayList<>(List.of());
+
+        Assertions.assertEquals(arrayListExpected,arrayListActual);
+    }
 }
