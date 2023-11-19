@@ -185,3 +185,8 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	Here is a sample run:
 	Enter 10 integers: 34 5 3 5 6 4 33 2 2 4
 	The distinct integers are 34 5 3 6 4 33 2
+051. (ArrayList of Character) Write a method that returns an array list of Character
+	from a string using the following header:
+	public static ArrayList<Character> toCharacterArray(String s)
+	For example, toCharacterArray("abc") returns an array list that contains
+	characters 'a', 'b', and 'c'.
