@@ -177,3 +177,11 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	1010
 	The largest row index: 2
 	The largest column index: 2, 3
+050. (Remove duplicates) Write a method that removes the duplicate elements from
+	an array list of integers using the following header:
+	public static void removeDuplicate(ArrayList<Integer> list)
+	Write a test program that prompts the user to enter 10 integers to a list and displays
+	the distinct integers in their input order and separated by exactly one space.
+	Here is a sample run:
+	Enter 10 integers: 34 5 3 5 6 4 33 2 2 4
+	The distinct integers are 34 5 3 6 4 33 2
