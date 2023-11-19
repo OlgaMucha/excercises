@@ -5,13 +5,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayNBijN {
-    //how many elements?
 
     /**Method name: userInput
      * User enters size of array
      * @return int size of array
      */
-    private int userInput(){
+    public int userInput(){
         System.out.print("Enter the array size n: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
@@ -21,8 +20,7 @@ public class ArrayNBijN {
      * Array of a given size is filled in randomly with 0's and 1's
      * @return filled in array
      */
-    public int[][] fillInArray(){
-        int size = this.userInput();
+    public int[][] fillInArray(int size){
         int[][] array = new int[size][size];
         Random random = new Random(1);
         for (int i = 0; i < size; i++) {

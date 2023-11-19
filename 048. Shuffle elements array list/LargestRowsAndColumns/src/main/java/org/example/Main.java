@@ -7,7 +7,8 @@ public class Main {
 
         ArrayNBijN arrayNBijN = new ArrayNBijN();
 
-        int[][] array = arrayNBijN.fillInArray();
+        int size = arrayNBijN.userInput();
+        int[][] array = arrayNBijN.fillInArray(size);
         arrayNBijN.outputLargestColsAndRows(array);
     }
 

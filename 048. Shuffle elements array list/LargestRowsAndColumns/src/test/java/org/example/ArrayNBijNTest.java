@@ -3,6 +3,7 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -127,5 +128,43 @@ class ArrayNBijNTest {
         ArrayList<Integer> arrayActual = cut.calculateTotalPerLine(array);
         //Assert
         Assertions.assertEquals(arrayExpected, arrayActual);
+    }
+
+    @Test //all elements of randomly generated array are 0 or 1
+    void test_fillInArray_array3by3(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] arrayActual = cut.fillInArray(3);
+        //Assert
+        for (int i = 0; i < arrayActual.length; i++) {
+            for (int j = 0; j < arrayActual.length; j++) {
+                Assertions.assertTrue((arrayActual[i][j] == 0 || arrayActual[i][j] == 1)&&arrayActual.length == 3);
+            }
+        }
+    }
+
+    @Test //all elements of randomly generated array are 0 or 1
+    void test_fillInArray_array1by1(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] arrayActual = cut.fillInArray(1);
+        //Assert
+        Assertions.assertTrue((arrayActual[0][0] == 0 || arrayActual[0][0] == 1)&&arrayActual.length == 1);
+    }
+
+    @Test //all elements of randomly generated array are 0 or 1
+    void test_fillInArray_array2by2(){
+        //Arrange
+        ArrayNBijN cut = new ArrayNBijN();
+        //Act
+        int[][] arrayActual = cut.fillInArray(2);
+        //Assert
+        for (int i = 0; i < arrayActual.length; i++) {
+            for (int j = 0; j < arrayActual.length; j++) {
+                Assertions.assertTrue((arrayActual[i][j] == 0 || arrayActual[i][j] == 1)&&arrayActual.length == 2);
+            }
+        };
     }
 }
