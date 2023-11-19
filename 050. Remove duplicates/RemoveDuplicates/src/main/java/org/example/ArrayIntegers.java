@@ -28,4 +28,13 @@ public class ArrayIntegers {
         return noDuplicatesArray;
     }
 
+    public String output(ArrayList<Integer> arrayResults) {
+        String outputNumbers = "";
+        for (int i = 0; i < arrayResults.size(); i++) {
+            outputNumbers = outputNumbers.concat(arrayResults.get(i) + " ");
+        }
+        String text = "The distinct integers are ";
+        return text.concat(outputNumbers);
+    }
+
 }
