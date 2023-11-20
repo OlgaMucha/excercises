@@ -190,3 +190,7 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	public static ArrayList<Character> toCharacterArray(String s)
 	For example, toCharacterArray("abc") returns an array list that contains
 	characters 'a', 'b', and 'c'.
+052. (Sort ArrayList) Write the following method that sorts an ArrayList of numbers:
+	public static void sort(ArrayList<Integer> list)
+	Write a test program that prompts the user to enter five numbers, stores them in
+	an array list, and displays them in increasing order.
