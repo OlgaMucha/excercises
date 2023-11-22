@@ -18,7 +18,7 @@ class ArrayListIntTest {
         cut.setArrayList(arrayList);
         ArrayList<Integer> sortedArrayActual = cut.sortArrayList();
         ArrayList<Integer> sortedArrayExpected = new ArrayList<>(List.of());
-        Assertions.assertEquals(sortedArrayExpected,sortedArrayExpected);
+        Assertions.assertEquals(sortedArrayExpected,sortedArrayActual);
     }
 
     @Test
@@ -28,7 +28,7 @@ class ArrayListIntTest {
         cut.setArrayList(arrayList);
         ArrayList<Integer> sortedArrayActual = cut.sortArrayList();
         ArrayList<Integer> sortedArrayExpected = new ArrayList<>(List.of(1));
-        Assertions.assertEquals(sortedArrayExpected,sortedArrayExpected);
+        Assertions.assertEquals(sortedArrayExpected,sortedArrayActual);
     }
 
     @Test
@@ -38,7 +38,7 @@ class ArrayListIntTest {
         cut.setArrayList(arrayList);
         ArrayList<Integer> sortedArrayActual = cut.sortArrayList();
         ArrayList<Integer> sortedArrayExpected = new ArrayList<>(List.of(1,2));
-        Assertions.assertEquals(sortedArrayExpected,sortedArrayExpected);
+        Assertions.assertEquals(sortedArrayExpected,sortedArrayActual);
     }
 
     @Test
@@ -48,7 +48,7 @@ class ArrayListIntTest {
         cut.setArrayList(arrayList);
         ArrayList<Integer> sortedArrayActual = cut.sortArrayList();
         ArrayList<Integer> sortedArrayExpected = new ArrayList<>(List.of(-1,2));
-        Assertions.assertEquals(sortedArrayExpected,sortedArrayExpected);
+        Assertions.assertEquals(sortedArrayExpected,sortedArrayActual);
     }
 
     @Test
@@ -58,7 +58,7 @@ class ArrayListIntTest {
         cut.setArrayList(arrayList);
         ArrayList<Integer> sortedArrayActual = cut.sortArrayList();
         ArrayList<Integer> sortedArrayExpected = new ArrayList<>(Arrays.asList(1,2,7,9,10));
-        Assertions.assertEquals(sortedArrayExpected,sortedArrayExpected);
+        Assertions.assertEquals(sortedArrayExpected,sortedArrayActual);
     }
 
     @Test
@@ -68,7 +68,7 @@ class ArrayListIntTest {
         cut.setArrayList(arrayList);
         ArrayList<Integer> sortedArrayActual = cut.sortArrayList();
         ArrayList<Integer> sortedArrayExpected = new ArrayList<>(Arrays.asList(1,2,3));
-        Assertions.assertEquals(sortedArrayExpected,sortedArrayExpected);
+        Assertions.assertEquals(sortedArrayExpected,sortedArrayActual);
     }
 
     @Test
@@ -78,6 +78,6 @@ class ArrayListIntTest {
         cut.setArrayList(arrayList);
         ArrayList<Integer> sortedArrayActual = cut.sortArrayList();
         ArrayList<Integer> sortedArrayExpected = new ArrayList<>(Arrays.asList(2,10,10));
-        Assertions.assertEquals(sortedArrayExpected,sortedArrayExpected);
+        Assertions.assertEquals(sortedArrayExpected,sortedArrayActual);
     }
 }
