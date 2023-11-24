@@ -204,5 +204,9 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	triangle is created with sides that violate the rule, as follows:
 	/** Construct a triangle with the specified sides */
 	public Triangle(double side1, double side2, double side3)
-	throws IllegalTriangleException {
-	// Implement it
+	throws IllegalTriangleException 
+055. (Remove text) Write a program that removes all the occurrences of a specified
+	string from a text file. For example, invoking
+	java Exercise12_11 John filename
+	removes the string John from the specified file. Your program should get the
+	arguments from the command line.
