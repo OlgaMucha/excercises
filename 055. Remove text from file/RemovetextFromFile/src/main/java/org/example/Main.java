@@ -24,8 +24,6 @@ public class Main {
         //remove text
         textFile.removeText("online");
         textFile.fillInFile();
-
-
     }
 
 

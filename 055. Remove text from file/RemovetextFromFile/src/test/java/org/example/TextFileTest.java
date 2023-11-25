@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 class TextFileTest {
 
     @org.junit.jupiter.api.Test
@@ -135,5 +137,31 @@ class TextFileTest {
         Assertions.assertEquals(expectedText, actualText);
     }
 
+    @Test
+    public void test_setTest_setsTextOk(){
+        String text1 = "Stol z powylanymanymi nogami";
+        TextFile textFile = new TextFile();
+        textFile.setText(text1);
+        String expectedText = "Stol z powylanymanymi nogami";
+        String actualText = textFile.getText();
+        Assertions.assertEquals(expectedText, actualText);
+    }
 
+    @Test
+    public void test_setFile_setsFileOk(){
+        java.io.File actualFile = new File("text1.txt");
+        TextFile textFile = new TextFile();
+        textFile.setFile(actualFile);
+
+        String actualPath = "text1.txt";
+        String expectedPath = actualFile.getPath();
+        java.io.File expectedFile = textFile.getFile();
+
+        Assertions.assertAll (
+                ()-> {
+                    Assertions.assertEquals(expectedPath, actualPath);
+                    Assertions.assertEquals(expectedFile, actualFile);
+                }
+        ) ;
+    }
 }
