@@ -39,7 +39,9 @@ public class TextFile {
     //endregion
 
     public void replaceTextWithText(String oldText, String newText){
-        this.text = this.text.replace(oldText , newText);
+        if(!oldText.equals("")){
+            this.text = this.text.replace(oldText , newText);
+        }
     }
 
     public void removeText(String textToRemove){
