@@ -3,18 +3,10 @@ package org.example;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 
 public class TextFile {
     private java.io.File file;
     private String text;
-    //fill in file
-
-    public void fillInFile() throws FileNotFoundException {
-        PrintWriter printWriter = new PrintWriter(this.file);
-        printWriter.println(this.text);
-        printWriter.close();
-    }
 
     //region Getters & Setters
     public File getFile() {
@@ -38,6 +30,12 @@ public class TextFile {
 
     //endregion
 
+    public void fillInFile() throws FileNotFoundException {
+        PrintWriter printWriter = new PrintWriter(this.file);
+        printWriter.println(this.text);
+        printWriter.close();
+    }
+
     public void replaceTextWithText(String oldText, String newText){
         if(!oldText.equals("")){
             this.text = this.text.replace(oldText , newText);
@@ -47,5 +45,4 @@ public class TextFile {
     public void removeText(String textToRemove){
         replaceTextWithText(textToRemove,"");
     }
-
 }

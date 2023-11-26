@@ -148,6 +148,16 @@ class TextFileTest {
     }
 
     @Test
+    public void test_setTest_setsEmptyTextOk(){
+        String text1 = "";
+        TextFile textFile = new TextFile();
+        textFile.setText(text1);
+        String expectedText = "";
+        String actualText = textFile.getText();
+        Assertions.assertEquals(expectedText, actualText);
+    }
+
+    @Test
     public void test_setFile_setsFileOk(){
         java.io.File actualFile = new File("text1.txt");
         TextFile textFile = new TextFile();
@@ -163,5 +173,77 @@ class TextFileTest {
                     Assertions.assertEquals(expectedFile, actualFile);
                 }
         ) ;
+    }
+
+    @Test
+    public void test_setFile_setsEmptyFilePath(){
+        java.io.File actualFile = new File("");
+        TextFile textFile = new TextFile();
+        textFile.setFile(actualFile);
+
+        String actualPath = "";
+        String expectedPath = actualFile.getPath();
+        java.io.File expectedFile = textFile.getFile();
+
+        Assertions.assertAll (
+                ()-> {
+                    Assertions.assertEquals(expectedPath, actualPath);
+                    Assertions.assertEquals(expectedFile, actualFile);
+                }
+        );
+    }
+
+    @Test
+    public void test_removeText_removesWordReturnsTextWothReturnedWord(){
+        String text1 = "Stol z powylanymanymi nogami";
+        TextFile textFile = new TextFile();
+        textFile.setText(text1);
+
+        String textToRemove = "Stol";
+        textFile.removeText(textToRemove);
+        String expectedText = " z powylanymanymi nogami";
+        String actualText = textFile.getText();
+
+        Assertions.assertEquals(expectedText,actualText);
+    }
+
+    @Test
+    public void test_removeText_removesEmptyStringReturnsThisSameText(){
+        String text1 = "Stol z powylanymanymi nogami";
+        TextFile textFile = new TextFile();
+        textFile.setText(text1);
+
+        String textToRemove = "";
+        textFile.removeText(textToRemove);
+        String expectedText = "Stol z powylanymanymi nogami";
+        String actualText = textFile.getText();
+
+        Assertions.assertEquals(expectedText,actualText);
+    }
+
+    @Test
+    public void test_removeText_removesWholeTextReturnsEmptyString(){
+        String text1 = "Stol z powylanymanymi nogami";
+        TextFile textFile = new TextFile();
+        textFile.setText(text1);
+
+        textFile.removeText(text1);
+        String expectedText = "";
+        String actualText = textFile.getText();
+
+        Assertions.assertEquals(expectedText,actualText);
+    }
+
+    @Test
+    public void test_removeText_removesOneLetterReturnsStringWithoutThisLetter(){
+        String text1 = "Stol z powylanymanymi nogami";
+        TextFile textFile = new TextFile();
+        textFile.setText(text1);
+
+        textFile.removeText("m");
+        String expectedText = "Stol z powylanyanyi nogai";
+        String actualText = textFile.getText();
+
+        Assertions.assertEquals(expectedText,actualText);
     }
 }
