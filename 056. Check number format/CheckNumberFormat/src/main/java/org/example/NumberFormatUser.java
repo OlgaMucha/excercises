@@ -10,7 +10,7 @@ public class NumberFormatUser {
     }
 
     //user entry
-    private int userEntryNumberType() {
+    public int userEntryNumberType() {
         Scanner scanner = new Scanner(System.in);
         boolean correctInput = false;
         int userEntry = 0;
@@ -41,34 +41,27 @@ public class NumberFormatUser {
         return scanner.nextLine();
     }
 
-    public String getRegexForUserChoice() {
-        int usersChoice = this.userEntryNumberType();
+    public String getRegexForUserChoice(int usersChoice) {
         String matchingRegex = "";
-        switch (usersChoice) {
-            case 2:
-                return "^[01]+";
-            case 8:
-                return "^[0-7]+";
-            case 10:
-                return "^[0-9]+";
-            case 16:
-                return "^[0-9a-fA-F]+";
-            default://should never happen
-                return "Incorrect entry";
-        }
+        return switch (usersChoice) {
+            case 2 -> "^[01]+";
+            case 8 -> "^[0-7]+";
+            case 10 -> "^[0-9]+";
+            case 16 -> "^[0-9a-fA-F]+";
+            default -> //should never happen
+                 "Incorrect entry";
+        };
     }
 
-    public void applyRegexToCheckNumber(){
-        String numberToCheck = this.userEntryNumberToCheck();
-        String regex = this.getRegexForUserChoice();
+    public void applyRegexToCheckNumber(String usersChoiceNumber, String usersChoiceMatchingRegex){
 
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(numberToCheck);
+        Pattern pattern = Pattern.compile(usersChoiceMatchingRegex);
+        Matcher matcher = pattern.matcher(usersChoiceNumber);
 
         if(matcher.matches()){
             System.out.println("Correct!");
         }else{
-            System.out.println("Incorrect!");
+            System.out.println("Incorrect format");
         }
     }
 

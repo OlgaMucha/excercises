@@ -4,11 +4,12 @@ public class Main {
     public static void main(String[] args) {
 
         NumberFormatUser numberFormatUser = new NumberFormatUser();
-        numberFormatUser.applyRegexToCheckNumber();
-        //Ask for a number format
-        //Ask for entry
-        //Check if entry is correct type, return message:
-        //"Correct entry" or "Incorrect entry"
+        String numberToCheck = numberFormatUser.userEntryNumberToCheck();
+        int usersChoiceTypeAsNumber = numberFormatUser.userEntryNumberType();
+
+        String regex = numberFormatUser.getRegexForUserChoice(usersChoiceTypeAsNumber);
+
+        numberFormatUser.applyRegexToCheckNumber(numberToCheck,regex);
 
     }
 }
