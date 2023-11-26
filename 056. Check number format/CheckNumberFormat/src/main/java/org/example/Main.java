@@ -9,7 +9,8 @@ public class Main {
 
         String regex = numberFormatUser.getRegexForUserChoice(usersChoiceTypeAsNumber);
 
-        numberFormatUser.applyRegexToCheckNumber(numberToCheck,regex);
+        String returnText = numberFormatUser.applyRegexToCheckNumber(numberToCheck,regex);
+        System.out.println(returnText);
 
     }
 }

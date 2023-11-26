@@ -53,15 +53,15 @@ public class NumberFormatUser {
         };
     }
 
-    public void applyRegexToCheckNumber(String usersChoiceNumber, String usersChoiceMatchingRegex){
+    public String applyRegexToCheckNumber(String usersChoiceNumber, String usersChoiceMatchingRegex){
 
         Pattern pattern = Pattern.compile(usersChoiceMatchingRegex);
         Matcher matcher = pattern.matcher(usersChoiceNumber);
 
         if(matcher.matches()){
-            System.out.println("Correct!");
+            return "Correct format";
         }else{
-            System.out.println("Incorrect format");
+            return "Incorrect format";
         }
     }
 
