@@ -3,9 +3,41 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class NumberFormatUserTest {
+
+
+
+    @Test
+    void test_getRegexForUserChoice_choice_2_8_10_16() {
+        NumberFormatUser cut = new NumberFormatUser();
+
+        String expectedReturnText = "Incorrect format";
+
+        Assertions.assertAll(
+                "Grouped assertion types 2, 8, 10, 16 return correct regex",
+                ()->Assertions.assertEquals("^[01]+",cut.getRegexForUserChoice(2)),
+                ()->Assertions.assertEquals("^[0-7]+",cut.getRegexForUserChoice(8)),
+                ()->Assertions.assertEquals("^[0-9]+",cut.getRegexForUserChoice(10)),
+                ()->Assertions.assertEquals("^[0-9a-fA-F]+",cut.getRegexForUserChoice(16))
+        );
+    }
+
+    @Test
+    void test_getRegexForUserChoice_choice_0_5_12_999() {
+        NumberFormatUser cut = new NumberFormatUser();
+
+        String expectedReturnText = "Incorrect format";
+
+        Assertions.assertAll(
+                "Grouped assertion types 2, 8, 10, 16, -10 return string incorrect entry",
+                ()->Assertions.assertEquals("Incorrect entry",cut.getRegexForUserChoice(0)),
+                ()->Assertions.assertEquals("Incorrect entry",cut.getRegexForUserChoice(5)),
+                ()->Assertions.assertEquals("Incorrect entry",cut.getRegexForUserChoice(12)),
+                ()->Assertions.assertEquals("Incorrect entry",cut.getRegexForUserChoice(999)),
+                ()->Assertions.assertEquals("Incorrect entry",cut.getRegexForUserChoice(-10))
+
+        );
+    }
 
 
     @Test
