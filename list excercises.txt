@@ -206,7 +206,8 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	public Triangle(double side1, double side2, double side3)
 	throws IllegalTriangleException 
 055. (Remove text) Write a program that removes all the occurrences of a specified
-	string from a text file. For example, invoking
-	java Exercise12_11 John filename
+	string from a text file. For example, file with text John filename
 	removes the string John from the specified file. Your program should get the
 	arguments from the command line.
+056. (CheckNumberFormat) Asks user to enter a number type (binary, hex ect. ) 
+	and checks if this entry is according to the chosen type.
