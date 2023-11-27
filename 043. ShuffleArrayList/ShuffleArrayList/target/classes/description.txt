@@ -1,3 +1,0 @@
-(Shuffle ArrayList) Write the following method that shuffles an ArrayList of
-numbers:
-public static void shuffle(ArrayList<Number> list)

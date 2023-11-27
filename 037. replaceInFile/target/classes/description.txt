@@ -1,5 +1,0 @@
-(Replace text) ReplaceText.java, gives a program that replaces
-text in a source file and saves the change into a new file. Revise the program to
-save the change into the original file. For example, invoking
-java Exercise12_16 file oldString newString
-replaces oldString in the source file with newString.
