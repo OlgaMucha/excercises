@@ -1,32 +1,36 @@
-form {
-  border: 3px solid #f1f1f1;
-}
-
-input[type=text], input[type=password] {
-  width: 25%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
+*{
+  margin: 0;
+  padding:0;
+  font-family: sans-serif;
   box-sizing: border-box;
 }
 
-button {
-  background-color: yellow;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 35%;
+
+.container{
+  width: 100%;
+  height:  auto;
+  background-image: linear-gradient(rgba(209, 115, 173, 0.8), rgba(45, 50, 0, 0.8)), url(photo.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
-button:hover {
-  opacity: 0.8;
+.form-box{
+  width: 90%;
+  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  background: #fff;
+  padding: 50px 60px 70px;
+  text-align: center;
 }
 
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
+.form-box h1{
+  font-size: 30px;
+  margin-bottom: 60px;
+  color:black;
+  position: relative;
+
 }
