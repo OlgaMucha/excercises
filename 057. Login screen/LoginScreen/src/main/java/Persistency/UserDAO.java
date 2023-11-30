@@ -50,6 +50,18 @@ public class UserDAO extends AbstractDAO{
                 }
             }
 
+    public void deleteOne(String userName) {
+        String sql = "DELETE FROM 057_user_login.users WHERE login = ?;";
+
+        try {
+            setupPreparedStatementWithKey(sql);
+            preparedStatement.setString(1, userName);
+            preparedStatement.executeUpdate();
+        } catch (SQLException sqlFout) {
+            System.out.println(sqlFout);
+        }
+    }
+
             protected void setupPreparedStatementWithKey(String sql) throws SQLException {
                 preparedStatement = dBaccess.getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             }

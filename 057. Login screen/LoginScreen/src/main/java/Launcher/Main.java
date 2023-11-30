@@ -18,9 +18,7 @@ public class Main {
 
         UserDAO userDAO = new UserDAO(dbAccess);
 
-        User user1 = new User("annlas", "123456789", Role.STUDENT,"anna.las@mymail.com");
-        userDAO.storeOne(user1);
-
+        userDAO.deleteOne("tommee");
 
         ArrayList<User> users = userDAO.getAll();
         for(User user: users){
