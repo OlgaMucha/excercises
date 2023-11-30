@@ -3,8 +3,10 @@ package Persistency;
 import Model.Role;
 import Model.User;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class UserDAO extends AbstractDAO{
@@ -32,4 +34,24 @@ public class UserDAO extends AbstractDAO{
             return users;
         }
 
-    }
+
+            public void storeOne(User user) {
+                String sql = "INSERT INTO 057_user_login.users (login, password, email, role) VALUES(?, ?, ?, ?);";
+
+                try {
+                    setupPreparedStatementWithKey(sql);
+                    preparedStatement.setString(1, user.getUserName());
+                    preparedStatement.setString(2, user.getPassword());
+                    preparedStatement.setString(3, user.getEmail());
+                    preparedStatement.setString(4, String.valueOf(user.getRole()));
+                    preparedStatement.executeUpdate();
+                } catch (SQLException sqlFout) {
+                    System.out.println(sqlFout);
+                }
+            }
+
+            protected void setupPreparedStatementWithKey(String sql) throws SQLException {
+                preparedStatement = dBaccess.getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            }
+        }
+
