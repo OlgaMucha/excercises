@@ -1,4 +1,6 @@
-import org.example.Role;
+package Model;
+
+import Model.Role;
 
 public class User {
     private String userName;
@@ -16,4 +18,13 @@ public class User {
         this.role = role;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", role=" + role +
+                '}';
+    }
 }
