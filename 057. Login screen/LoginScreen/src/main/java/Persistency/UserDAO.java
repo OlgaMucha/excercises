@@ -18,6 +18,8 @@ public class UserDAO extends AbstractDAO{
         try {
             setupPreparedStatement(sql);
             ResultSet resultSet = executeSelectStatement();
+
+
             while (resultSet.next()) {
                 String userName = resultSet.getString("LOGIN");
                 String password = resultSet.getString("PASSWORD");
@@ -32,6 +34,26 @@ public class UserDAO extends AbstractDAO{
             return users;
         }
 
+    public ArrayList<User> getAllByRole(Role role) throws SQLException {
+        String sql = "SELECT * FROM users WHERE role = ?;";
+        ArrayList<User> users = new ArrayList<>();
+
+        try {
+            setupPreparedStatement(sql);
+            preparedStatement.setString(1, String.valueOf(role));
+            ResultSet resultSet = executeSelectStatement();
+            while (resultSet.next()) {
+                String userName = resultSet.getString("LOGIN");
+                String password = resultSet.getString("PASSWORD");
+                String email = resultSet.getString("EMAIL");
+                User user = new User(userName, password, role, email);
+                users.add(user);
+            }
+        } catch (SQLException sqlError) {
+            System.out.println(sqlError);
+        }
+        return users;
+    }
 
         public void storeOne(User user) {
             String sql = "INSERT INTO 057_user_login.users (login, password, email, role) VALUES(?, ?, ?, ?);";

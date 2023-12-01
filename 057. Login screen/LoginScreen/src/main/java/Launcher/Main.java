@@ -18,13 +18,11 @@ public class Main {
 
         UserDAO userDAO = new UserDAO(dbAccess);
 
-        User user1 = userDAO.getOneByEmail("rober.jong@myname.com");
-        System.out.println(user1.toString());
 
-//        ArrayList<User> users = userDAO.getAll();
-//        for(User user: users){
-//            System.out.println(user.toString());
-//        }
+        ArrayList<User> users = userDAO.getAllByRole(Role.ADMINISTRATOR);
+        for(User user: users){
+            System.out.println(user.toString());
+        }
         dbAccess.closeConnection();
     }
 }
