@@ -2,8 +2,6 @@ package Persistency;
 
 import Model.Role;
 import Model.User;
-
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -60,6 +58,28 @@ public class UserDAO extends AbstractDAO{
             while (resultSet.next()) {
                 String password = resultSet.getString("PASSWORD");
                 String email = resultSet.getString("EMAIL");
+                Role role = Role.valueOf(resultSet.getString("ROLE"));
+                user.setUserName(userName);
+                user.setPassword(password);
+                user.setEmail(email);
+                user.setRole(role);
+            }
+        } catch (SQLException sqlFout) {
+            System.out.println(sqlFout);
+        }
+        return user;
+    }
+
+    public User getOneByEmail(String email) {
+        String sql = "SELECT * FROM 057_user_login.users WHERE email = ?;";
+        User user = new User();
+        try {
+            setupPreparedStatement(sql);
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = executeSelectStatement();
+            while (resultSet.next()) {
+                String userName = resultSet.getString("LOGIN");
+                String password = resultSet.getString("PASSWORD");
                 Role role = Role.valueOf(resultSet.getString("ROLE"));
                 user.setUserName(userName);
                 user.setPassword(password);
