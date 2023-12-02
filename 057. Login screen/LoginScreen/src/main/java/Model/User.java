@@ -2,6 +2,9 @@ package Model;
 
 import Model.Role;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class User {
     private String userName;
     private String password;
@@ -48,6 +51,13 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    //At least 8 characters, min 1 Uppercase 1 Lowercase 1 Number 1 special character
+
+    public boolean checkRegexPassword(){
+        String pattern = "(?=[A-Za-z0-9@#$%^&+!=]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=])(?=.{8,}).*$";
+        return Pattern.matches(pattern,this.password);
     }
 
     @Override

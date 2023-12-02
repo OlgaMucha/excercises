@@ -19,9 +19,17 @@ public class Main {
         UserDAO userDAO = new UserDAO(dbAccess);
 
 
-        ArrayList<User> users = userDAO.getAllByRole(Role.ADMINISTRATOR);
+
+        ArrayList<User> users = userDAO.getAll();
         for(User user: users){
             System.out.println(user.toString());
+            String output;
+            if(user.checkRegexPassword()){
+                output = " correct";
+            }else{
+                output = " incorrect";
+            }
+            System.out.println("Password " + user.getPassword() + " is" + output);
         }
         dbAccess.closeConnection();
     }
