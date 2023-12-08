@@ -13,7 +13,7 @@ public class Main {
         quadraticEquation.setB(scanner.nextInt());
         quadraticEquation.setC(scanner.nextInt());
 
-        int[] array = quadraticEquation.changeToVertexForm();
+        Fraction[] array = quadraticEquation.changeToVertexForm();
 
         String output = quadraticEquation.vortexFormOutput(array);
 
