@@ -2,45 +2,29 @@ import java.lang.reflect.Array;
 
 public class QuadraticEquation {
 
-    private double a;
-    private double b;
-    private double c;
+    private int a;
+    private int b;
+    private int c;
 
 
-    public QuadraticEquation(double a, double b, double c) {
+    public QuadraticEquation(int a, int b, int c) {
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    public double getA() {
-        return a;
+
+
+    public int[] changeToVertexForm(){
+
+        int h1 = -b;
+        int h2 = 2 * a;
+        int k1 = 4*a*c - b*b;
+        int k2 = 4*a;
+        return new int[]{h1, h2, k1, k2};
     }
 
-    public void setA(double a) {
-        this.a = a;
-    }
-
-    public double getB() {
-        return b;
-    }
-
-    public void setB(double b) {
-        this.b = b;
-    }
-
-    public double getC() {
-        return c;
-    }
-
-    public void setC(double c) {
-        this.c = c;
-    }
-
-    public Double[] changeToVertexForm(){
-
-        double h = -b/(2 * a);
-        double k = (4*a*b - b*b)/(4*a);
-        return new Double[]{h, k};
+    public String vortexFormOutput(int[] array){
+        return "h is " + array[0] + "/" + array[1] + " and k is " + array[2] + "/" + array[3];
     }
 }
