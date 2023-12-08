@@ -220,3 +220,10 @@ For example, sumDigits(234) returns 9 (= 2 + 3 + 4)
 	and implement the compareTo method to compare the circles on the basis of
 	area. Write a test class to find the larger of two instances of ComparableCircle
 	objects, and the larger between a circle and a rectangle.
+060. (Algebra: vertex form equations) The equation of a parabola can be expressed in
+	either standard form (y = ax2 + bx + c) or vertex form (y = a(x - h)2 + k).
+	Write a program that prompts the user to enter a, b, and c as integers in standard
+	form and displays h = -b/2a and k = (4ac - b2)/4a
+	b in the vertex form. Display h and k as rational numbers. 
+	Example output: Enter a, b, c: 1 3 1
+	h is -3/2 k is -5/4
