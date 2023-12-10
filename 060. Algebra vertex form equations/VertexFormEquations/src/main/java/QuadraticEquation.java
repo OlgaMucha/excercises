@@ -17,12 +17,21 @@ public class QuadraticEquation {
         this.c = c;
     }
 
+    public QuadraticEquation() {
+        this.a = 1;
+        this.b = 0;
+        this.c = 0;
+    }
+
     public int getA() {
         return a;
     }
 
     public void setA(int a) {
-        this.a = a;
+        if(a == 0){
+            throw new IllegalArgumentException("Not a quadratic equation, a cant be 0!");
+        }else {
+        this.a = a;}
     }
 
     public int getB() {

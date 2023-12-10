@@ -3,15 +3,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        QuadraticEquation quadraticEquation = new QuadraticEquation(1,3,1);
+        QuadraticEquation quadraticEquation = new QuadraticEquation();
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a, b and c: ");
 
-        quadraticEquation.setA(scanner.nextInt());
-        quadraticEquation.setB(scanner.nextInt());
-        quadraticEquation.setC(scanner.nextInt());
+        int number1 = scanner.nextInt();
+        quadraticEquation.setA(number1);
+
+        int number2 = scanner.nextInt();
+        quadraticEquation.setB(number2);
+
+        int number3 = scanner.nextInt();
+        quadraticEquation.setB(number3);
 
         Fraction[] array = quadraticEquation.changeToVertexForm();
 
